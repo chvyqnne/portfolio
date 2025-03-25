@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;700&family=Cardo:wght@400;700&family=Inter:wght@100..900&family=PT+Serif:wght@400;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-ibm: "IBM Plex Mono", monospace;
+  --font-dmsans: "DM Sans", sans-serif;
+  --font-cardo: "Cardo", serif;
+  --font-inter: "Inter", sans-serif;
+  --font-pt-serif: "PT Serif", serif;
+}
+
+body {
+  font-family: "PT Serif", serif;
+  cursor: url('/cursors/cursor.png'), auto;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+.emoji-shake {
+  display: inline-block;
+}
+
+.emoji-shake:hover {
+  animation: shake 0.4s ease-in-out infinite;
+}
+
+img.emoji:hover {
+  animation: shake 0.4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.bg-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes gradient-pan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 400% 400%;
+  animation: gradient-pan 5s ease infinite;
+}
+
+.word-wiggle:hover {
+  animation: wiggle 0.4s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1.5deg); }
+  75% { transform: rotate(-1.5deg); }
+}

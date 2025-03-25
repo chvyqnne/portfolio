@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["tailwindcss"],
+    "target": "ES2019",
+    "lib": ["DOM", "DOM.Iterable", "ES2019"]
+  },
+  "include": ["src", "tailwind.config.ts"]
+}
