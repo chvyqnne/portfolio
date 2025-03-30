@@ -93,6 +93,16 @@ export const AboutTextSection = () => {
 							github
 						</SoftLiftButton>
 					</li>
+					<li>
+						<span>listen to my playlists on </span>
+						<SoftLiftButton
+							color='green'
+							emojiSrc='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f49a.svg'
+							href='https://open.spotify.com/user/chvyvnne'
+						>
+							spotify
+						</SoftLiftButton>
+					</li>
 				</ul>
 			</div>
 		</motion.div>

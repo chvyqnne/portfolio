@@ -1,27 +1,117 @@
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FactCardGrid } from './FactCardGrid';
+import { Typewriter } from 'react-simple-typewriter';
 
 export const FunFactsSection = () => {
+	const [dismissed, setDismissed] = useState(false);
+	const [hasInteracted, setHasInteracted] = useState(false);
+	const [bubbleText, setBubbleText] = useState<'psst' | 'gotit' | 'back'>('psst');
+	const [typed, setTyped] = useState(false);
+	const [activeMessage, setActiveMessage] = useState('psst... hover over me');
+	
+	const backMessages = [
+		'back for more?',
+		'missed me?',
+		'couldn’t resist?',
+		'again? i’m flattered 💅',
+		'hi again 👀',
+	];
+
+	const [backIndex, setBackIndex] = useState(0);
+
+	useEffect(() => {
+		if (bubbleText !== 'psst') {
+			setTyped(false);
+		}
+
+		const typeDuration = activeMessage.length * 45;
+		const dismissDelay = 3000;
+
+		const typeTimer = setTimeout(() => {
+			setTyped(true);
+		}, typeDuration);
+
+		const dismissTimer =
+		bubbleText === 'gotit' || bubbleText === 'back'
+			? setTimeout(() => {
+				setDismissed(true);
+				setHasInteracted(true);
+			}, typeDuration + dismissDelay)
+			: undefined;
+
+		return () => {
+			clearTimeout(typeTimer);
+			if (dismissTimer) clearTimeout(dismissTimer);
+		};
+	}, [bubbleText, activeMessage]);
+
+
+	const handleMouseEnter = () => {
+		if (hasInteracted) {
+			const nextIndex = (backIndex + 1) % backMessages.length;
+			setBackIndex(nextIndex);
+			setActiveMessage(backMessages[nextIndex]);
+			setBubbleText('back');
+			setDismissed(false);
+			setTyped(false);
+		} else {
+			setBubbleText('gotit');
+			setActiveMessage('I knew you\'d get it!');
+		}
+	};
+
 	return (
 		<div className='mx-40' id='facts-section-container'>
-			<p className='text-[25px] mb-4 font-bold flex items-center gap-2'>
-				<span className='bg-gradient-to-r from-rose-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent'>
-					some fun facts
-				</span>
-				<span className='kaomoji-dance bg-gradient-to-r from-orange-400 to-rose-400 bg-clip-text text-transparent'>
-					٩(⸝⸝ᵕᴗᵕ⸝⸝)و✧*.ﾟ
-				</span>
-			</p>
+			<div className='relative inline-block w-fit mb-6'>
+				<p className='text-[25px] font-bold flex items-center gap-2'>
+					<span className='bg-gradient-to-r from-rose-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent'>
+						some fun facts
+					</span>
+
+					<span className='relative inline-block'>
+						<AnimatePresence>
+							{!dismissed ? <motion.div
+								animate={{ opacity: 1, y: -12, x: 12 }}
+								className='absolute italic -top-7 left-5 ml-1 bg-white border border-pink-200 rounded-xl px-3 py-2 text-sm text-rose-400 shadow-md whitespace-nowrap z-10'
+								exit={{ opacity: 0, y: -4 }}
+								initial={{ opacity: 0, y: -4, x: 4 }}
+								transition={{ duration: 0.5 }}
+							>
+								{typed ? activeMessage : (
+									<Typewriter
+										cursor
+										deleteSpeed={0}
+										loop={0}
+										typeSpeed={45}
+										words={[activeMessage]}
+									/>
+								)}
+								<div className='absolute -bottom-1 left-4 rotate-45 w-4 h-4 bg-white border-l border-b border-fuchsia-200 z-[-1]' />
+							</motion.div> : null}
+						</AnimatePresence>
+
+						<span
+							className='kaomoji-dance bg-gradient-to-r from-orange-400 to-rose-400 bg-clip-text text-transparent cursor-pointer'
+							onMouseEnter={handleMouseEnter}
+						>
+							٩(⸝⸝ᵕᴗᵕ⸝⸝)و✧*.ﾟ
+						</span>
+					</span>
+				</p>
+			</div>
+
 			<FactCardGrid
 				items={[
-					{ label: 'education', content: 'B.S. in Computer Science & Data Science from American University', emoji: '🎓' },
-					{ label: 'skills', content: 'Full-stack development, UI/UX design, data analysis, Agile collaboration', emoji: '🛠️' },
-					{ label: 'tech stack', content: 'TypeScript, React, Django, Tailwind CSS, PostgreSQL, Go, Python', emoji: '💻' },
-					{ label: 'tools', content: 'Git, Docker, AWS, Postman, Figma, Linux, ServiceNow', emoji: '🧰' },
-					{ label: 'hometown', content: 'Waiʻanae, Hawaiʻi', emoji: '🌺' },
-					{ label: 'languages', content: 'English, learning Mandarin Chinese 中文 + Korean 한국어', emoji: '🗣️' },
-					{ label: 'hobbies', content: 'puzzling, hiking, language learning', emoji: '🧩' },
-					{ label: 'personality type', content: 'ENFJ – the warm-hearted, organized type', emoji: '🌞' },
-					{ label: 'coffee order', content: 'iced matcha latte with vanilla and oat milk', emoji: '🍵' },
+					{ label: 'education', content: 'B.S. in Computer Science & Data Science from American University', kaomoji: '(๑•̀ㅂ•́)و✧' },
+					{ label: 'skills', content: 'Full-stack development, UI/UX design, data analysis, Agile collaboration', kaomoji: '┗(＾0＾)┓' },
+					{ label: 'tech stack', content: 'TypeScript, React, Django, Tailwind CSS, PostgreSQL, Go, Python', kaomoji: '(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧' },
+					{ label: 'tools', content: 'Git, Docker, AWS, Postman, Figma, Linux, ServiceNow', kaomoji: '(•̀ᴗ•́)و ̑̑' },
+					{ label: 'hometown', content: 'Waiʻanae, Hawaiʻi', kaomoji: '(*´∀｀)ﾉ🌺' },
+					{ label: 'languages', content: 'English, learning Mandarin Chinese 中文 + Korean 한국어', kaomoji: '( ˘▽˘)っ♨' },
+					{ label: 'hobbies', content: 'puzzling, hiking, language learning', kaomoji: 'ヾ(＾∇＾)' },
+					{ label: 'personality type', content: 'ENFJ – the warm-hearted, organized type', kaomoji: '(づ｡◕‿‿◕｡)づ' },
+					{ label: 'drink order', content: 'iced matcha latte with vanilla and oat milk', kaomoji: '₍˶ᵔ ᵕ ᵔ˶₎🍵' },
 				]}
 			/>
 		</div>

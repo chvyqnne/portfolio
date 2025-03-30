@@ -25,6 +25,7 @@ export const SoftLiftButton = ({
 		purple: '#E1BEE7',
 		yellow: '#FDE68A',
 		blue: '#BFDBFE',
+		green:'#A7F3D0',
 	}[color] || '#E1BEE7';
 
 	return (
