@@ -7,14 +7,12 @@ import reactCompiler from 'eslint-plugin-react-compiler';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import reactRecommended from 'eslint-plugin-react/configs/recommended.js';
 import stylistic from '@stylistic/eslint-plugin'
-import tailwind from "eslint-plugin-tailwindcss"
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
  
 export default tseslint.config(
     eslint.configs.recommended, tseslint.configs.strictTypeChecked, tseslint.configs.stylisticTypeChecked,
-    reactPlugin.configs.flat.recommended, reactPlugin.configs.flat['jsx-runtime'], jsxA11y.flatConfigs.recommended,
-    ...tailwind.configs["flat/recommended"], ...pluginQuery.configs['flat/recommended'],
+  reactPlugin.configs.flat.recommended, reactPlugin.configs.flat['jsx-runtime'], jsxA11y.flatConfigs.recommended,
     {
         ignores: [
             "eslint.config.js", "tailwind.config.js", "postcss.config.js", "vite.config.ts",

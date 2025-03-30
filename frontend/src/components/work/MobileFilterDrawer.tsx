@@ -1,62 +1,61 @@
-import { useState } from "react";
-import { FilterSidebar } from "./FilterSidebar";
-import { AnimatePresence, motion } from "framer-motion";
+import { useState } from 'react';
+import { FilterSidebar } from './FilterSidebar';
+import { AnimatePresence, motion } from 'framer-motion';
 
 type Props = {
-    allSkills: string[];
-    selectedSkills: string[];
-    toggleSkill: (skill: string) => void;
-    clearAll: () => void;
-    projects: { id: number; title: string }[];
-    scrollTo: (id: number) => void;
-    resultCount: number;
+	readonly allSkills: string[];
+	readonly selectedSkills: string[];
+	readonly toggleSkill: (skill: string) => void;
+	readonly clearAll: () => void;
+	readonly projects: { id: number; title: string }[];
+	readonly scrollTo: (id: number) => void;
+	readonly resultCount: number;
 };
 
 export const MobileFilterDrawer = ({
-    allSkills,
-    selectedSkills,
-    toggleSkill,
-    clearAll,
-    projects,
-    scrollTo,
-    resultCount,
+	allSkills,
+	selectedSkills,
+	toggleSkill,
+	clearAll,
+	projects,
+	scrollTo,
+	resultCount,
 }: Props) => {
-    const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState(false);
 
-    return (
-        <div className="md:hidden w-full mt-6 px-4">
-            <button
-                onClick={() => setOpen(!open)}
-                className="w-full bg-pink-400 text-white py-2 px-4 rounded-full border border-black font-semibold hover:bg-pink-600 transition-colors"
-            >
-                {open ? "Hide Filters" : "Show Filters"}
-            </button>
+	return (
+		<div className='md:hidden w-full mt-6 px-4'>
+			<button
+				className='w-full bg-pink-400 text-white py-2 px-4 rounded-full border border-black font-semibold hover:bg-pink-600 transition-colors'
+				onClick={() => { setOpen(!open); }}
+				type='button'
+			>
+				{open ? 'Hide Filters' : 'Show Filters'}
+			</button>
 
-            <AnimatePresence>
-                {open && (
-                    <motion.div
-                        key="drawer"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="mt-4 overflow-hidden"
-                    >
-                        <div className="p-4">
-                            <FilterSidebar
-                                variant='mobile'
-                                allSkills={allSkills}
-                                selectedSkills={selectedSkills}
-                                toggleSkill={toggleSkill}
-                                clearAll={clearAll}
-                                projects={projects}
-                                scrollTo={scrollTo}
-                                resultCount={resultCount}
-                            />
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </div>
-    );
+			<AnimatePresence>
+				{open ? <motion.div
+					animate={{ opacity: 1, height: 'auto' }}
+					className='mt-4 overflow-hidden'
+					exit={{ opacity: 0, height: 0 }}
+					initial={{ opacity: 0, height: 0 }}
+					key='drawer'
+					transition={{ duration: 0.3, ease: 'easeInOut' }}
+				>
+					<div className='p-4'>
+						<FilterSidebar
+							allSkills={allSkills}
+							clearAll={clearAll}
+							projects={projects}
+							resultCount={resultCount}
+							scrollTo={scrollTo}
+							selectedSkills={selectedSkills}
+							toggleSkill={toggleSkill}
+							variant='mobile'
+						/>
+					</div>
+				</motion.div> : null}
+			</AnimatePresence>
+		</div>
+	);
 };
