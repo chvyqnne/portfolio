@@ -3,6 +3,7 @@ import { Divider } from '../components/Divider';
 import { FunFactsSection } from '../components/about/FunFactsSection';
 import { ImageCard } from '../components/about/ImageCard';
 import { motion } from 'framer-motion';
+import { Footer } from '../components/Footer';
 
 export const About = () => {
 	return (
@@ -23,7 +24,9 @@ export const About = () => {
 						<Divider />
 					</div>
 					<FunFactsSection />
-
+					<div className='pt-10'>
+						<Footer />
+					</div>
 				</div>
 			</div>
 		</motion.div >

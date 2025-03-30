@@ -6,12 +6,13 @@ type Props = {
 	readonly role: string;
 	readonly timeline: string;
 	readonly skills: string[];
+	readonly tools: string[];
 	readonly link: string;
 	readonly linkLabel: string;
 	readonly image?: string;
 };
 
-export const ProjectSummary = ({ title, description, image, skills, link, linkLabel, role, timeline }: Props) => {
+export const ProjectSummary = ({ title, description, image, skills, link, linkLabel, role, timeline, tools }: Props) => {
 	return (
 		<div className='p-4 space-y-4'>
 			<div className='space-y-4'>
@@ -26,6 +27,9 @@ export const ProjectSummary = ({ title, description, image, skills, link, linkLa
 
 						<p className='text-[#8F8F8F] mt-5'>Timeline</p>
 						<p>{timeline}</p>
+                        
+						<p className='text-[#8F8F8F] mt-5'>Tools</p>
+						<p>{tools.join(', ')}</p>
 
 						<p className='text-[#8F8F8F] mt-5'>Skills</p>
 						<p>{skills.join(', ')}</p>
@@ -38,15 +42,17 @@ export const ProjectSummary = ({ title, description, image, skills, link, linkLa
 					/>
 				</div>
 				<div
-					className='bg-white rounded-2xl h-[350px] w-[350px] flex flex-col justify-center border gap-5'
+					className='bg-white rounded-2xl h-[350px] w-[350px] border border-black flex items-center justify-center p-4'
 					id='project-image'
 					style={{ boxShadow: '15px 15px 0 #FFEDB0' }}
 				>
-					{image ? <img
-						alt={`${title} preview`}
-						className='object-contain max-h-full max-w-full'
-						src={image}
-					/> : null}
+					{image ? (
+						<img
+							alt={`${title} preview`}
+							className='w-full max-w-[400px] h-auto object-contain mx-auto'
+							src={image}
+						/>
+					) : null}
 				</div>
 			</div>
 		</div>

@@ -44,6 +44,7 @@ export const ProjectDetails = () => {
 								skills={project.skills}
 								timeline={project.timeline}
 								title={project.title}
+								tools={project.tools}
 							/>
 						</div>
 					</div>

@@ -1,5 +1,6 @@
 type Props = {
 	readonly allSkills: string[];
+	readonly allTools: string[];
 	readonly selectedSkills: string[];
 	readonly toggleSkill: (skill: string) => void;
 	readonly clearAll: () => void;
@@ -11,6 +12,7 @@ type Props = {
 
 export const FilterSidebar = ({
 	allSkills,
+	allTools,
 	selectedSkills,
 	toggleSkill,
 	clearAll,
@@ -37,7 +39,7 @@ export const FilterSidebar = ({
 
 				<div>
 					<p className='text-xl font-semibold mb-2'>Projects</p>
-					<ul className='bg-white border border-black rounded-xl p-4'>
+					<ul className='bg-white border border-black rounded-xl p-4 max-h-[100px] overflow-x-auto'>
 						{projects.map((p) => (
 							<li key={p.id}>
 								<button
@@ -51,10 +53,30 @@ export const FilterSidebar = ({
 						))}
 					</ul>
 				</div>
+                
+				<div>
+					<p className='text-xl font-semibold mb-2'>Tools</p>
+					<div className='flex flex-wrap gap-2 bg-white border border-black rounded-xl p-4 mb-6 max-h-[100px] overflow-x-auto'>
+						{allTools.map((tool) => (
+							<button
+								className={`text-sm px-3 py-1 rounded-full hover:bg-pink-300 font-inter border ${
+									selectedSkills.includes(tool)
+										? 'bg-pink-400 text-white border-black'
+										: 'bg-white text-gray-800'
+								}`}
+								key={tool}
+								onClick={() => { toggleSkill(tool); }}
+								type='button'
+							>
+								{tool}
+							</button>
+						))}
+					</div>
+				</div>
 
 				<div>
 					<p className='text-xl font-semibold mb-2'>Skills</p>
-					<div className='flex flex-wrap gap-2 bg-white border border-black rounded-xl p-4'>
+					<div className='flex flex-wrap gap-2 bg-white border border-black rounded-xl p-4 max-h-[100px] overflow-x-auto'>
 						{allSkills.map((skill) => (
 							<button
 								className={`text-sm px-3 py-1 rounded-full hover:bg-pink-300 font-inter border ${selectedSkills.includes(skill)

@@ -5,7 +5,7 @@ export const ImageCard = () => {
 			id='image-container'
 			style={{ boxShadow: '15px 15px 0 #E1BEE7' }}
 		>
-			<img alt='headshot' src='./public/cheyanne.heic' />
+			<img alt='headshot' src='./public/headshot.jpg' />
 		</div>
 	);
 };

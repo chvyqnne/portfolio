@@ -6,12 +6,13 @@ type Props = {
 	readonly title: string;
 	readonly description: string;
 	readonly skills: string[];
+	readonly tools: string[];
 	readonly image: string;
 	readonly timeline: string;
 	readonly innerRef?: (el: HTMLDivElement | null) => void;
 };
 
-export const ProjectCard = ({ id, title, description, image, skills, timeline, innerRef }: Props) => (
+export const ProjectCard = ({ id, title, description, image, skills, timeline, tools, innerRef }: Props) => (
 	<div
 		className='grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 md:gap-12 items-start'
 		ref={innerRef}
@@ -32,7 +33,7 @@ export const ProjectCard = ({ id, title, description, image, skills, timeline, i
 		</motion.div>
 
 		<div className='flex flex-col gap-4'>
-			<p className='text-sm font-mono text-gray-600'>{skills.join(' | ')}</p>
+			<p className='text-sm font-mono text-gray-600'>{[...tools, ...skills].join(' | ')}</p>
 			<h3 className='text-3xl font-bold font-inter'>{title}</h3>
 			<p className='font-inter'>{timeline}</p>
 			<p className='text-lg font-inter text-gray-800'>{description}</p>

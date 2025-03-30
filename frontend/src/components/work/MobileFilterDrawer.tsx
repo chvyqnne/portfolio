@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 type Props = {
 	readonly allSkills: string[];
+	readonly allTools: string[];
 	readonly selectedSkills: string[];
 	readonly toggleSkill: (skill: string) => void;
 	readonly clearAll: () => void;
@@ -14,6 +15,7 @@ type Props = {
 
 export const MobileFilterDrawer = ({
 	allSkills,
+	allTools,
 	selectedSkills,
 	toggleSkill,
 	clearAll,
@@ -45,6 +47,7 @@ export const MobileFilterDrawer = ({
 					<div className='p-4'>
 						<FilterSidebar
 							allSkills={allSkills}
+							allTools={allTools}
 							clearAll={clearAll}
 							projects={projects}
 							resultCount={resultCount}

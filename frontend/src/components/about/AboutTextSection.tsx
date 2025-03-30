@@ -10,12 +10,11 @@ export const AboutTextSection = () => {
 			</div>
 			<div className='flex flex-wrap mt-5 font-dmsans text-lg'>
 				<p>
-					I graduated from American University and have been building responsive,
-					user-friendly apps ever since. Right now, I work at Independent Project Analysis,
-					where I develop full-stack web and mobile-friendly tools using React, Django, and PostgreSQL.
-					I love working in collaborative, Agile teams and enjoy solving problems that make people’s lives easier
-					(or at least a little less annoying). My stack includes everything from TypeScript and Tailwind CSS to Python,
-					Go, and AWS — so I’m pretty comfortable hopping around the dev world.
+					I graduated from American University with a degree in Computer Science and Data Science and have worked on building web and mobile-friendly tools across the legal, government,
+					and nonprofit sectors. Currently at Independent Project Analysis, I contribute to full-stack application development in an Agile environment,
+					collaborating closely with cross-functional teams to deliver internal tools that support
+					data-driven decision-making. I bring a strong focus on usability, team communication,
+					and operational efficiency, with experience working across the stack using technologies like React, Django, and PostgreSQL.
 				</p>
 			</div>
 			<div className='mt-10'>

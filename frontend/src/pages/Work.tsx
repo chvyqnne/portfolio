@@ -6,10 +6,11 @@ import { MobileFilterDrawer } from '../components/work/MobileFilterDrawer';
 import { Footer } from '../components/Footer';
 import { projects, Project } from '../data/projects';
 
-const getAllSkills = (projectList: Project[]) =>
-	[...new Set(projectList.flatMap((p) => p.skills))].sort((a, b) =>
-		a.localeCompare(b),
-	);
+const getAllSkills = (projectList: Project[]) => {
+	const tools = [...new Set(projectList.flatMap((p) => p.tools))].sort((a, b) => a.localeCompare(b));
+	const skills = [...new Set(projectList.flatMap((p) => p.skills))].sort((a, b) => a.localeCompare(b));
+	return { tools, skills };
+};
 
 export const Work = () => {
 	const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
@@ -24,11 +25,12 @@ export const Work = () => {
 
 	const filteredProjects = selectedSkills.length
 		? projects.filter((p) =>
-			selectedSkills.every((s) => p.skills.includes(s)),
+			selectedSkills.every((s) => p.skills.includes(s) || p.tools.includes(s)),
 		)
 		: projects;
 
-	const allSkills = getAllSkills(projects);
+	const { tools, skills } = getAllSkills(projects);
+
 	const projectRefs = useRef<Record<number, HTMLDivElement | null>>({});
 
 	const scrollToProject = (id: number) => {
@@ -53,7 +55,8 @@ export const Work = () => {
 							}}
 						>
 							<MobileFilterDrawer
-								allSkills={allSkills}
+								allSkills={skills}
+								allTools={tools}
 								clearAll={clearAll}
 								projects={projects}
 								resultCount={filteredProjects.length}
@@ -72,13 +75,15 @@ export const Work = () => {
 										skills={project.skills}
 										timeline={project.timeline}
 										title={project.title}
+										tools={project.tools}
 									/>
 								))}
 							</div>
 						</div>
 
 						<FilterSidebar
-							allSkills={allSkills}
+							allSkills={skills}
+							allTools={tools}
 							clearAll={clearAll}
 							projects={projects}
 							resultCount={filteredProjects.length}
