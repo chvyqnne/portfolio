@@ -92,9 +92,8 @@ export const Work = () => {
 							toggleSkill={toggleSkill}
 						/>
 					</div>
-					<div className='mt-20'>
+					<div className='mt-10 md:mt-20'>
 						<Footer
-							contact={true}
 						/>
 					</div>
 				</div>

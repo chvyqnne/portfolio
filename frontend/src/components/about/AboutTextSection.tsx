@@ -31,7 +31,7 @@ export const AboutTextSection = () => {
 					</span>
 				</p>
 			</div>
-			<div className='text-lg leading-relaxed font-dmsans flex flex-wrap gap-x-1'>
+			<div className='text-lg leading-relaxed font-dmsans flex flex-wrap gap-x-1 mt-2 md:mt-0'>
 				{paragraph.trim().split(' ').map((word, index) => (
 					<motion.span
 						className='transition-colors py-0.5 rounded-md hover:bg-gradient-to-r from-pink-100 via-fuchsia-200 to-indigo-100'

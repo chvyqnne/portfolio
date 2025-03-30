@@ -17,9 +17,16 @@ export const SoftLiftButton = ({
 	color = 'pink',
 	email = false,
 }: SoftLiftButtonProps) => {
-	const bgClass = `bg-${color}-50`;
-	const borderClass = `border-${color}-200`;
-	const textClass = `text-${color}-700 hover:text-${color}-500`;
+	const colorStyles: Record<string, string> = {
+		pink: 'bg-pink-50 border-pink-200 text-pink-700 hover:text-pink-500',
+		purple: 'bg-purple-50 border-purple-200 text-purple-700 hover:text-purple-500',
+		yellow: 'bg-yellow-50 border-yellow-200 text-yellow-700 hover:text-yellow-500',
+		blue: 'bg-blue-50 border-blue-200 text-blue-700 hover:text-blue-500',
+		green: 'bg-green-50 border-green-200 text-green-700 hover:text-green-500',
+	};
+
+	const styleClass = colorStyles[color] || colorStyles.pink;
+
 	const shadowColor = {
 		pink: '#F9A8D4',
 		purple: '#E1BEE7',
@@ -30,7 +37,7 @@ export const SoftLiftButton = ({
 
 	return (
 		<a
-			className={`relative inline-block px-3 py-1 rounded-full border transition-transform duration-200 ease-in-out transform hover:-translate-y-1 ${bgClass} ${borderClass} ${textClass}`}
+			className={`relative inline-block px-3 py-1 rounded-full border transition-transform duration-200 ease-in-out transform hover:-translate-y-1 ${styleClass}`}
 			download={download}
 			href={href}
 			onMouseEnter={(e) => {

@@ -11,7 +11,7 @@ export const Home = () => {
 			initial={{ opacity: 0, y: 30 }}
 			transition={{ duration: 0.6, delay: 0.2 }}
 		>
-			<div className='flex overflow-hidden items-center justify-center h-screen bg-gradient-to-tr from-fuchsia-100 to-white flex-col gap-10 relative z-10'>
+			<div className='flex overflow-hidden items-center justify-center h-full md:h-screen bg-gradient-to-tr from-fuchsia-100 to-white flex-col gap-10 relative z-10'>
 				<motion.div
 					whileHover={{
 						y: -6,
@@ -21,7 +21,7 @@ export const Home = () => {
 					<IntroCard />
 				</motion.div>
 
-				<div className='text-center mt-4 text-lg font-inter text-gray-700 italic'>
+				<div className='text-center mx-4 mt-4 text-lg font-inter text-gray-700 italic'>
 					new here? check out my{' '}
 					<NavLink
 						className='inline-flex items-center font-semibold underline underline-offset-4 decoration-pink-400 hover:text-pink-500 transition-colors'

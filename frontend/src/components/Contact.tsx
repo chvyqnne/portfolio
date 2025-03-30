@@ -1,6 +1,6 @@
 export const Contact = () => {
 	return (
-		<div className='flex flex-row gap-3 items-center text-[14px] font-ibm'>
+		<div className='flex md:flex-row gap-3 items-center text-[14px] font-ibm flex-wrap'>
 			<img
 				alt='books-emoji'
 				className='emoji-shake w-6 h-6'

@@ -26,14 +26,14 @@ export const ProjectDetails = () => {
 			initial={{ opacity: 0, y: 30 }}
 			transition={{ duration: 0.6, delay: 0.2 }}
 		>
-			<div className='bg-gradient-to-tr from-pink-300 via-yellow-50 to-slate-50 pt-[80px] px-6 md:h-screen'>
-				<div className='flex flex-col md:flex-row justify-center gap-4 mx-30'>
+			<div className='bg-gradient-to-tr from-pink-300 via-yellow-50 to-slate-50 pt-[40px] md:pt-[80px] md:px-6 md:h-screen'>
+				<div className='flex flex-col md:flex-row justify-center gap-4 mx-6 md:mx-30'>
 					<div className='md:sticky md:top-[120px] h-fit flex flex-col gap-4'>
 						<BackLink to='/work' />
 						<ProjectSectionNav sections={project.sections} />
 					</div>
 
-					<div className='flex-1 space-y-10 overflow-y-auto max-h-[80vh] px-2 scroll-smooth'>
+					<div className='flex-1 space-y-10 md:overflow-y-auto md:max-h-[80vh] px-2 scroll-smooth'>
 						<div id='summary'>
 							<ProjectSummary
 								description={project.description}
@@ -49,7 +49,7 @@ export const ProjectDetails = () => {
 						</div>
 					</div>
 				</div>
-				<div className='mt-10'>
+				<div className='mt-10 mx-6'>
 					<Footer />
 				</div>
 			</div>

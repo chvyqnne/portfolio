@@ -10,12 +10,11 @@ export const Experience = () => {
 			initial={{ opacity: 0, y: 30 }}
 			transition={{ duration: 0.6, delay: 0.2 }}
 		>
-			<div className='flex flex-col md:flex-row w-screen h-screen overflow-hidden bg-gradient-to-t from-blue-200 to-white items-center justify-center px-4 md:px-10 mt-20'>
+			<div className='flex flex-col md:flex-row w-screen h-full md:h-screen overflow-hidden bg-gradient-to-t from-blue-200 to-white items-center justify-center px-4 md:px-10 mt-20'>
 				<div className='flex flex-col'>
 					<ExperiencePanel />
 					<div className='mt-10'>
 						<Footer
-							contact={true}
 						/>
 					</div>
 				</div>

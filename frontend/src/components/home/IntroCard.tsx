@@ -3,13 +3,14 @@ import { Contact } from '../Contact';
 export const IntroCard = () => {
 	return (
 		<div
-			className='bg-white rounded-2xl py-20 px-30 w-full md:min-w-[600px] flex flex-col justify-center border gap-4'
+			className='bg-white rounded-2xl py-20 md:mt-0 mt-20 px-5 md:px-15 w-full max-w-[300px] md:min-w-[600px] flex flex-col justify-center border gap-4'
 			style={{ boxShadow: '15px 15px 0 #E1BEE7' }}
 		>
 			<div className='flex flex-row gap-2'>
-				<p className='text-[25px] font-inter font-bold text-[#C862D8] whitespace-nowrap'>
+				<p className='text-[25px] font-inter md:whitespace-nowrap'>
 					hi i&apos;m cheyanne!
 				</p>
+				
 				<img
 					alt='tulip'
 					className='emoji-shake w-7 h-7'

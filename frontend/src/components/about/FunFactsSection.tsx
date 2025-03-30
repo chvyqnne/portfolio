@@ -12,10 +12,24 @@ export const FunFactsSection = () => {
 	
 	const backMessages = [
 		'back for more?',
-		'missed me?',
-		'couldn’t resist?',
-		'again? i’m flattered 💅',
-		'hi again 👀',
+		'oh no, you again?',
+		'*stares*',
+		'surely not again',
+		'you like this too much',
+		'fine. i guess.',
+		'sigh',
+		'i’m done.',
+	];
+
+	const kaomojiList = [
+		'٩(⸝⸝ᵕᴗᵕ⸝⸝)و✧*.ﾟ',
+		'(；⌣̀_⌣́)',
+		'ಠ_ಠ',
+		'(；一_一)',
+		'(눈_눈)',
+		'（－＿－；）',
+		'(ಥ﹏ಥ)',
+		'(ノಠ益ಠ)ノ彡┻━┻',
 	];
 
 	const [backIndex, setBackIndex] = useState(0);
@@ -62,10 +76,10 @@ export const FunFactsSection = () => {
 	};
 
 	return (
-		<div className='mx-40' id='facts-section-container'>
+		<div className='mx-6 md:mx-40' id='facts-section-container'>
 			<div className='relative inline-block w-fit mb-6'>
 				<p className='text-[25px] font-bold flex items-center gap-2'>
-					<span className='bg-gradient-to-r from-rose-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent'>
+					<span className='bg-gradient-to-r from-rose-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent whitespace-nowrap'>
 						some fun facts
 					</span>
 
@@ -73,7 +87,7 @@ export const FunFactsSection = () => {
 						<AnimatePresence>
 							{!dismissed ? <motion.div
 								animate={{ opacity: 1, y: -12, x: 12 }}
-								className='absolute italic -top-7 left-5 ml-1 bg-white border border-pink-200 rounded-xl px-3 py-2 text-sm text-rose-400 shadow-md whitespace-nowrap z-10'
+								className='absolute italic -top-7 left-0 md:left-5 ml-1 bg-white border border-pink-200 rounded-xl px-3 py-2 text-sm text-rose-400 shadow-md whitespace-nowrap z-10'
 								exit={{ opacity: 0, y: -4 }}
 								initial={{ opacity: 0, y: -4, x: 4 }}
 								transition={{ duration: 0.5 }}
@@ -95,8 +109,11 @@ export const FunFactsSection = () => {
 							className='kaomoji-dance bg-gradient-to-r from-orange-400 to-rose-400 bg-clip-text text-transparent cursor-pointer'
 							onMouseEnter={handleMouseEnter}
 						>
-							٩(⸝⸝ᵕᴗᵕ⸝⸝)و✧*.ﾟ
+							{bubbleText === 'back'
+								? kaomojiList[backIndex] || kaomojiList[kaomojiList.length - 1]
+								: '٩(⸝⸝ᵕᴗᵕ⸝⸝)و✧*.ﾟ'}
 						</span>
+
 					</span>
 				</p>
 			</div>
