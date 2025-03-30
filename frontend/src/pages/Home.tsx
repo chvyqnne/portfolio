@@ -13,6 +13,9 @@ export const Home = () => {
 		>
 			<div className='flex overflow-hidden items-center justify-center h-full md:h-screen bg-gradient-to-tr from-fuchsia-100 to-white flex-col gap-10 relative z-10'>
 				<motion.div
+					animate={{ scale: 1, opacity: 1, y: 0 }}
+					initial={{ scale: 0.95, opacity: 0, y: 20 }}
+					transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
 					whileHover={{
 						y: -6,
 						transition: { duration: 0.3, ease: 'easeInOut' },

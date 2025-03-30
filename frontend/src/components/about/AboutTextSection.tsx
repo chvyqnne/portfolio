@@ -21,7 +21,7 @@ export const AboutTextSection = () => {
 							deleteSpeed={30}
 							loop={0}
 							typeSpeed={50}
-							words={['full stack developer', 'boba enthusiast', 'cat lover']}
+							words={['full stack developer', 'matcha enthusiast', 'cat lover']}
 						/>
 					</span>
 				</p>
