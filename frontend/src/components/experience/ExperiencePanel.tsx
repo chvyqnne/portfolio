@@ -38,7 +38,7 @@ export const ExperiencePanel = () => {
 	};
 
 	return (
-		<div className='flex flex-col md:flex-row w-screen h-screen overflow-hidden bg-gradient-to-t from-blue-200 to-white items-center justify-center px-4 md:px-10'>
+		<div className='flex flex-col md:flex-row w-screen h-auto overflow-hidden bg-gradient-to-t from-blue-200 to-white items-center justify-center px-4 md:px-10 mt-30'>
 			<div className='flex flex-col gap-4 w-full max-w-6xl'>
 				<div className='flex flex-col md:flex-row gap-6 w-full'>
 					<ExperienceScrollList

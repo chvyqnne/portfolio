@@ -17,7 +17,7 @@ export const Button = ({ link, label, variant = 'pink', showArrow }: Props) => {
 
 	return (
 		<a
-			className={`bg-white inline-flex items-center font-ibm gap-1 px-4 py-2 border border-black rounded-full text-sm transition-colors w-fit ${hoverClasses}`}
+			className={`bg-white inline-flex items-center font-ibm gap-1 px-4 py-2 border border-black rounded-full text-xs transition-colors w-fit ${hoverClasses}`}
 			href={link}
 		>
 			{label}

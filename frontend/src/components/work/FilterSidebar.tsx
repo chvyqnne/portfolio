@@ -38,12 +38,12 @@ export const FilterSidebar = ({
 				</h3>
 
 				<div>
-					<p className='text-xl font-semibold mb-2'>Projects</p>
+					<p className='text-lg font-semibold mb-2'>Projects</p>
 					<ul className='bg-white border border-black rounded-xl p-4 max-h-[100px] overflow-x-auto'>
 						{projects.map((p) => (
 							<li key={p.id}>
 								<button
-									className='text-md font-inter text-left text-gray-800 hover:text-pink-500 transition-colors'
+									className='text-sm font-inter text-left text-gray-800 hover:text-pink-500 transition-colors'
 									onClick={() => { scrollTo(p.id); }}
 									type='button'
 								>
@@ -55,11 +55,11 @@ export const FilterSidebar = ({
 				</div>
                 
 				<div>
-					<p className='text-xl font-semibold mb-2'>Tools</p>
+					<p className='text-lg font-semibold mb-2'>Tools</p>
 					<div className='flex flex-wrap gap-2 bg-white border border-black rounded-xl p-4 mb-6 max-h-[100px] overflow-x-auto'>
 						{allTools.map((tool) => (
 							<button
-								className={`text-sm px-3 py-1 rounded-full hover:bg-pink-300 font-inter border ${
+								className={`text-xs px-3 py-1 rounded-full hover:bg-pink-300 font-inter border ${
 									selectedSkills.includes(tool)
 										? 'bg-pink-400 text-white border-black'
 										: 'bg-white text-gray-800'
@@ -75,11 +75,11 @@ export const FilterSidebar = ({
 				</div>
 
 				<div>
-					<p className='text-xl font-semibold mb-2'>Skills</p>
+					<p className='text-lg font-semibold mb-2'>Skills</p>
 					<div className='flex flex-wrap gap-2 bg-white border border-black rounded-xl p-4 max-h-[100px] overflow-x-auto'>
 						{allSkills.map((skill) => (
 							<button
-								className={`text-sm px-3 py-1 rounded-full hover:bg-pink-300 font-inter border ${selectedSkills.includes(skill)
+								className={`text-xs px-3 py-1 rounded-full hover:bg-pink-300 font-inter border ${selectedSkills.includes(skill)
 									? 'bg-pink-400 text-white border border-black'
 									: 'bg-white text-gray-800'
 								}`}
@@ -96,13 +96,13 @@ export const FilterSidebar = ({
 
 			<div className='flex items-center justify-between mt-6'>
 				<button
-					className='bg-pink-400 text-white text-md px-4 py-1 border border-black rounded-full hover:bg-pink-600'
+					className='bg-pink-400 text-white text-xs px-4 py-1 border border-black rounded-full hover:bg-pink-600'
 					onClick={clearAll}
 					type='button'
 				>
 					Clear All
 				</button>
-				<span className='text-md font-inter text-gray-700'>
+				<span className='text-sm font-inter text-gray-700'>
 					Results: {resultCount}
 				</span>
 			</div>

@@ -33,10 +33,10 @@ export const ProjectCard = ({ id, title, description, image, skills, timeline, t
 		</motion.div>
 
 		<div className='flex flex-col gap-4'>
-			<p className='text-sm font-mono text-gray-600'>{[...tools, ...skills].join(' | ')}</p>
-			<h3 className='text-3xl font-bold font-inter'>{title}</h3>
+			<p className='text-xs font-mono text-gray-600'>{[...tools, ...skills].join(' | ')}</p>
+			<h3 className='text-2xl font-bold font-inter'>{title}</h3>
 			<p className='font-inter'>{timeline}</p>
-			<p className='text-lg font-inter text-gray-800'>{description}</p>
+			<p className='text-md font-inter text-gray-800'>{description}</p>
 			<Button
 				label='project'
 				link={`/project/${id}`}

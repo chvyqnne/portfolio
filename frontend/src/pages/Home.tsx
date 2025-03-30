@@ -21,7 +21,7 @@ export const Home = () => {
 					<IntroCard />
 				</motion.div>
 
-				<div className='text-center mt-10 text-lg font-inter text-gray-700 italic'>
+				<div className='text-center mt-4 text-lg font-inter text-gray-700 italic'>
 					new here? check out my{' '}
 					<NavLink
 						className='inline-flex items-center font-semibold underline underline-offset-4 decoration-pink-400 hover:text-pink-500 transition-colors'
@@ -47,8 +47,6 @@ export const Home = () => {
 						🌸
 					</span>
 				</div>
-
-				<hr className='m-6' />
 				<div className='w-[90%]'>
 					<Footer />
 				</div>

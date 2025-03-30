@@ -51,6 +51,20 @@ export const experience: Experience[] = [
 		],
 	},
 	{
+		year: '2022',
+		title: 'Immigration Policy Research Assistant',
+		company: 'American University',
+		timeline: '2022',
+		skills: [
+			'Data Analysis', 'Data Visualization', 'Data Cleaning', 'Research',
+		],
+		responsibilities: [
+			'Applied advanced statistical techniques to analyze datasets, identifying key trends, patterns, and correlations',
+			'Created compelling data visualizations in R, facilitating data-driven decision-making processes',
+			'Developed comprehensive reports and presentations to contribute to evidence-based policy recommendations',
+		],
+	},
+	{
 		year: '2021',
 		title: 'Software Engineer Intern',
 		company: 'Jordan & Cara Odo Foundation',
@@ -65,15 +79,11 @@ export const experience: Experience[] = [
 		],
 	},
 	{
-		year: '2020',
-		title: 'UX Design Intern',
-		company: 'Placeholder Company',
-		timeline: '06/2019 - 08/2019',
-		skills: ['Figma', 'Prototyping', 'Wireframing'],
-		responsibilities: [
-			'Designed high-fidelity wireframes for internal tools',
-			'Collaborated with developers on UI polish',
-			'Conducted user research interviews',
-		],
+		year: '2021',
+		title: 'Volunteer Data Analyst',
+		company: 'Adoptee Hub',
+		timeline: '04/2021 - 06/2021',
+		skills: ['R', 'Data Analysis'],
+		responsibilities: ['Acquired raw data related to adoptions on international, national, and state levels to maintain database'],
 	},
 ];

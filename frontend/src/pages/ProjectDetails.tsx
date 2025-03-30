@@ -26,8 +26,8 @@ export const ProjectDetails = () => {
 			initial={{ opacity: 0, y: 30 }}
 			transition={{ duration: 0.6, delay: 0.2 }}
 		>
-			<div className='bg-gradient-to-tr from-pink-300 via-yellow-50 to-slate-50 pt-[100px] px-6 md:h-screen'>
-				<div className='flex flex-col md:flex-row justify-center gap-4'>
+			<div className='bg-gradient-to-tr from-pink-300 via-yellow-50 to-slate-50 pt-[80px] px-6 md:h-screen'>
+				<div className='flex flex-col md:flex-row justify-center gap-4 mx-30'>
 					<div className='md:sticky md:top-[120px] h-fit flex flex-col gap-4'>
 						<BackLink to='/work' />
 						<ProjectSectionNav sections={project.sections} />

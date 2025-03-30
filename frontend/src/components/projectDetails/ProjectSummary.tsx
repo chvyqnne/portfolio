@@ -42,15 +42,14 @@ export const ProjectSummary = ({ title, description, image, skills, link, linkLa
 					/>
 				</div>
 				<div
-					className='bg-white rounded-2xl h-[350px] w-[350px] border border-black flex items-center justify-center p-4'
 					id='project-image'
-					style={{ boxShadow: '15px 15px 0 #FFEDB0' }}
 				>
 					{image ? (
 						<img
 							alt={`${title} preview`}
-							className='w-full max-w-[400px] h-auto object-contain mx-auto'
+							className='bg-white rounded-2xl h-[400px] w-auto border border-black flex items-center justify-center p-4'
 							src={image}
+							style={{ boxShadow: '15px 15px 0 #FFEDB0' }}
 						/>
 					) : null}
 				</div>

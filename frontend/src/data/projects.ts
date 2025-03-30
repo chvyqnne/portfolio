@@ -79,7 +79,7 @@ export const projects: Project[] = [
 		tools: ['JavaScript', 'Bootstrap', 'HTML/CSS'],
 		skills: ['API Integration', 'Animation', 'Responsive Design'],
 		image: '/projects/libraryDashboard.jpg',
-		link: '#',
+		link: 'https://www.american.edu/library/services/laptops.cfm',
 		linkLabel: 'link',
 	},
 	{
