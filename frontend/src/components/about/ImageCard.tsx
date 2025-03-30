@@ -1,3 +1,5 @@
+import headshot from '../../assets/headshot.jpg';
+
 export const ImageCard = () => {
 	return (
 		<div
@@ -5,7 +7,7 @@ export const ImageCard = () => {
 			id='image-container'
 			style={{ boxShadow: '15px 15px 0 #E1BEE7' }}
 		>
-			<img alt='headshot' src='./public/headshot.jpg' />
+			<img alt='headshot' className='rounded-2xl' src={headshot} />
 		</div>
 	);
 };

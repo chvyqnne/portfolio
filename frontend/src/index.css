@@ -6,11 +6,9 @@
   --font-dmsans: "DM Sans", sans-serif;
   --font-cardo: "Cardo", serif;
   --font-inter: "Inter", sans-serif;
-  --font-pt-serif: "PT Serif", serif;
 }
 
 body {
-  font-family: "PT Serif", serif;
   cursor: url('/cursors/cursor.png'), auto;
 }
 
@@ -63,4 +61,29 @@ img.emoji:hover {
   0%, 100% { transform: rotate(0deg); }
   25% { transform: rotate(1.5deg); }
   75% { transform: rotate(-1.5deg); }
+}
+
+@keyframes dance {
+  0%   { transform: rotate(0deg) translateY(0); }
+  25%  { transform: rotate(2deg) translateY(-1px); }
+  50%  { transform: rotate(-2deg) translateY(1px); }
+  75%  { transform: rotate(2deg) translateY(-1px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
+@keyframes kaomoji-dance {
+  0%   { transform: rotate(0deg) translateY(0); }
+  25%  { transform: rotate(2deg) translateY(-1px); }
+  50%  { transform: rotate(-2deg) translateY(1px); }
+  75%  { transform: rotate(2deg) translateY(-1px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
+.kaomoji-dance {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.kaomoji-dance:hover {
+  animation: kaomoji-dance 0.6s ease-in-out infinite;
 }

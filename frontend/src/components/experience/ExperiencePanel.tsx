@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Footer } from '../Footer';
 import { ExperienceScrollList } from './ExperienceScrollList';
 import { ExperienceDetail } from './ExperienceDetail';
 import { motion } from 'framer-motion';
@@ -38,47 +37,40 @@ export const ExperiencePanel = () => {
 	};
 
 	return (
-		<div className='flex flex-col md:flex-row w-screen h-auto overflow-hidden bg-gradient-to-t from-blue-200 to-white items-center justify-center px-4 md:px-10 mt-30'>
-			<div className='flex flex-col gap-4 w-full max-w-6xl'>
-				<div className='flex flex-col md:flex-row gap-6 w-full'>
-					<ExperienceScrollList
-						canScrollDown={canScrollDown}
-						canScrollUp={canScrollUp}
-						items={visibleItems}
-						onScrollDown={scrollDown}
-						onScrollUp={scrollUp}
-						onSelect={setSelectedIndex}
-						onWheel={handleWheel}
-						scrollStart={scrollStart}
-						selectedIndex={selectedIndex}
-					/>
-					<div className='text-center text-sm text-gray-600 font-inter mt-2'>
-						{scrollStart + 1}–{Math.min(scrollStart + visibleCount, experience.length)} of {experience.length}
-					</div>
-					<motion.div
-						animate={{ opacity: 1, x: 0 }}
-						className='mt-4'
-						exit={{ opacity: 0, x: -30 }}
-						initial={{ opacity: 0, x: 30 }}
-						key={selectedIndex}
-						transition={{ duration: 0.4 }}
-						whileHover={{
-							y: -6,
-							transition: { duration: 0.3, ease: 'easeInOut' },
-						}}
-					>
-						<ExperienceDetail
-							responsibilities={selected.responsibilities}
-							skills={selected.skills}
-							timeline={selected.timeline}
-						/>
-					</motion.div>
+		<div className='flex flex-col gap-4 w-full max-w-6xl'>
+			<div className='flex flex-col md:flex-row gap-6 w-full'>
+				<ExperienceScrollList
+					canScrollDown={canScrollDown}
+					canScrollUp={canScrollUp}
+					items={visibleItems}
+					onScrollDown={scrollDown}
+					onScrollUp={scrollUp}
+					onSelect={setSelectedIndex}
+					onWheel={handleWheel}
+					scrollStart={scrollStart}
+					selectedIndex={selectedIndex}
+				/>
+				<div className='text-center text-sm text-gray-600 font-inter mt-2'>
+					{scrollStart + 1}–{Math.min(scrollStart + visibleCount, experience.length)} of {experience.length}
 				</div>
-				<div className='mt-10 md:mt-20'>
-					<Footer
-						contact={true}
+				<motion.div
+					animate={{ opacity: 1, x: 0 }}
+					className='mt-4'
+					exit={{ opacity: 0, x: -30 }}
+					initial={{ opacity: 0, x: 30 }}
+					key={selectedIndex}
+					transition={{ duration: 0.4 }}
+					whileHover={{
+						y: -6,
+						transition: { duration: 0.3, ease: 'easeInOut' },
+					}}
+				>
+					<ExperienceDetail
+						responsibilities={selected.responsibilities}
+						skills={selected.skills}
+						timeline={selected.timeline}
 					/>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);

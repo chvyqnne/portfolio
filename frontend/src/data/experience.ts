@@ -23,6 +23,14 @@ export const experience: Experience[] = [
 		],
 	},
 	{
+		year: '2024',
+		title: 'Data Processing Technician',
+		company: 'Innovative Driven',
+		timeline: '',
+		skills: [],
+		responsibilities: [],
+	},
+	{
 		year: '2023',
 		title: 'Data Analyst',
 		company: 'Innovative Driven',
