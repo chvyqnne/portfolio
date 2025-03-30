@@ -34,7 +34,7 @@ export const FilterSidebar = ({
 		<div className={`${baseClasses} ${variantClasses}`}>
 			<div className='space-y-6'>
 				<h3 className='font-bold text-md font-inter'>
-					— just for fun (੭˃ᴗ˂)੭⋆˚⟡˖ ࣪
+					— just for fun <span className='kaomoji-dance'>(੭˃ᴗ˂)੭⋆˚⟡˖ ࣪</span>
 				</h3>
 
 				<div>

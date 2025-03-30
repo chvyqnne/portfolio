@@ -1,4 +1,12 @@
 import { Button } from '../Button';
+import { motion } from 'framer-motion';
+import {
+	BriefcaseIcon,
+	CalendarIcon,
+	WrenchScrewdriverIcon,
+	LightBulbIcon,
+} from '@heroicons/react/24/solid';
+import { ImageModal } from './ImageModal';
 
 type Props = {
 	readonly title: string;
@@ -10,50 +18,100 @@ type Props = {
 	readonly link: string;
 	readonly linkLabel: string;
 	readonly image?: string;
+	readonly imageCaption?: string;
 };
 
-export const ProjectSummary = ({ title, description, image, skills, link, linkLabel, role, timeline, tools }: Props) => {
+const summaryColor = 'bg-yellow-50 border-yellow-200 text-yellow-700';
+
+export const ProjectSummary = ({
+	title,
+	description,
+	image,
+	imageCaption,
+	skills,
+	link,
+	linkLabel,
+	role,
+	timeline,
+	tools,
+}: Props) => {
 	return (
-		<div className='p-4 space-y-4'>
-			<div className='space-y-4'>
+		<motion.div
+			animate={{ opacity: 1, y: 0 }}
+			className='p-4 space-y-6'
+			initial={{ opacity: 0, y: 30 }}
+			transition={{ duration: 0.6 }}
+		>
+			<motion.div
+				animate={{ opacity: 1, y: 0 }}
+				className='space-y-4'
+				initial={{ opacity: 0, y: 20 }}
+				transition={{ delay: 0.1 }}
+			>
 				<p className='font-dmsans font-bold text-3xl'>{title}</p>
 				<p className='font-dmsans text-xl'>{description}</p>
-			</div>
+			</motion.div>
+
 			<div className='flex flex-col md:flex-row gap-10'>
-				<div className='flex flex-col gap-6'>
-					<div className='bg-[#FFEDB0] border border-black rounded-xl font-inter p-6 min-w-[350px] min-h-[300px] text-lg'>
-						<p className='text-[#8F8F8F]'>Role</p>
-						<p>{role}</p>
+				<motion.div
+					animate={{ opacity: 1, y: 0 }}
+					className='flex flex-col gap-6'
+					initial={{ opacity: 0, y: 20 }}
+					transition={{ delay: 0.2 }}
+				>
+					<div
+						className={`border rounded-2xl font-inter p-6 min-w-[350px] min-h-[300px] text-lg ${summaryColor}`}
+					>
+						<div className='mb-4'>
+							<p className='flex items-center gap-2 text-sm font-semibold uppercase text-yellow-600'>
+								<BriefcaseIcon className='h-5 w-5 text-yellow-500' />
+								Role
+							</p>
+							<p>{role}</p>
+						</div>
 
-						<p className='text-[#8F8F8F] mt-5'>Timeline</p>
-						<p>{timeline}</p>
-                        
-						<p className='text-[#8F8F8F] mt-5'>Tools</p>
-						<p>{tools.join(', ')}</p>
+						<div className='mb-4'>
+							<p className='flex items-center gap-2 text-sm font-semibold uppercase text-yellow-600'>
+								<CalendarIcon className='h-5 w-5 text-yellow-500' />
+								Timeline
+							</p>
+							<p>{timeline}</p>
+						</div>
 
-						<p className='text-[#8F8F8F] mt-5'>Skills</p>
-						<p>{skills.join(', ')}</p>
+						<div className='mb-4'>
+							<p className='flex items-center gap-2 text-sm font-semibold uppercase text-yellow-600'>
+								<WrenchScrewdriverIcon className='h-5 w-5 text-yellow-500' />
+								Tools
+							</p>
+							<p>{tools.join(', ')}</p>
+						</div>
+
+						<div>
+							<p className='flex items-center gap-2 text-sm font-semibold uppercase text-yellow-600'>
+								<LightBulbIcon className='h-5 w-5 text-yellow-500' />
+								Skills
+							</p>
+							<p>{skills.join(', ')}</p>
+						</div>
 					</div>
+
 					<Button
 						label={linkLabel}
 						link={link}
 						showArrow={true}
 						variant='yellow'
 					/>
-				</div>
-				<div
-					id='project-image'
-				>
-					{image ? (
-						<img
-							alt={`${title} preview`}
-							className='bg-white rounded-2xl h-[400px] w-auto border border-black flex items-center justify-center p-4'
-							src={image}
-							style={{ boxShadow: '15px 15px 0 #FFEDB0' }}
-						/>
-					) : null}
-				</div>
+				</motion.div>
+
+				{image ?
+					<ImageModal
+						alt={`${title} preview`}
+						caption={imageCaption}
+						className='h-[400px]'
+						src={image}
+					/>
+					: null}
 			</div>
-		</div>
+		</motion.div>
 	);
 };

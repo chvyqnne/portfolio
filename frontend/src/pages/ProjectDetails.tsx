@@ -5,6 +5,7 @@ import { ProjectSummary } from '../components/projectDetails/ProjectSummary';
 import { BackLink } from '../components/projectDetails/BackLink';
 import { ProjectSectionNav } from '../components/projectDetails/ProjectSectionNav';
 import { motion } from 'framer-motion';
+import { ProjectSection } from '../components/projectDetails/ProjectSection';
 
 export const ProjectDetails = () => {
 	const { id } = useParams();
@@ -26,8 +27,8 @@ export const ProjectDetails = () => {
 			initial={{ opacity: 0, y: 30 }}
 			transition={{ duration: 0.6, delay: 0.2 }}
 		>
-			<div className='bg-gradient-to-tr from-pink-300 via-yellow-50 to-slate-50 pt-[40px] md:pt-[80px] md:px-6 md:h-screen'>
-				<div className='flex flex-col md:flex-row justify-center gap-4 mx-6 md:mx-30'>
+			<div className='bg-gradient-to-tr from-pink-300 via-yellow-50 to-slate-50 pt-[40px] lg:pt-[60px] md:px-6'>
+				<div className='flex flex-col md:flex-col lg:flex-row justify-center gap-4 mx-6 md:mx-30'>
 					<div className='md:sticky md:top-[120px] h-fit flex flex-col gap-4'>
 						<BackLink to='/work' />
 						<ProjectSectionNav sections={project.sections} />
@@ -38,6 +39,7 @@ export const ProjectDetails = () => {
 							<ProjectSummary
 								description={project.description}
 								image={project.image}
+								imageCaption={project.imageCaption}
 								link={project.link}
 								linkLabel={project.linkLabel}
 								role={project.role}
@@ -47,6 +49,15 @@ export const ProjectDetails = () => {
 								tools={project.tools}
 							/>
 						</div>
+
+						{project.sections?.map((section, index) => (
+							<ProjectSection
+								content={section.content}
+								index={index}
+								key={index}
+								title={section.title}
+							/>
+						))}
 					</div>
 				</div>
 				<div className='mt-10 mx-6'>
