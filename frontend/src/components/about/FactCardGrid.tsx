@@ -34,7 +34,7 @@ export const FactCardGrid = ({ items}: FactCardGridProps) => {
 						key={label}
 						whileHover={{ y: -6 }}
 					>
-						<p className='uppercase text-xs font-semibold tracking-wide'>
+						<p className='uppercase text-xs font-bold tracking-wide'>
 							{label} {kaomoji ? <span className='ml-1 kaomoji-dance'>{kaomoji}</span> : null}
 						</p>
 						<p className='text-sm mt-1 font-dmsans leading-snug'>

@@ -33,31 +33,9 @@ export const projects: Project[] = [
 		image: '/projects/portfolioSpec.png',
 		link: '#',
 		linkLabel: 'link',
-		sections: [
-			{
-				title: 'Stats',
-				type: 'text',
-				content: '- 90% engagement increase\n- 40% fewer support tickets',
-			},
-		],
 	},
 	{
 		id: 2,
-		title: 'Pantry Pal',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-		timeline: 'MM/YYYY - MM/YYYY',
-		role: 'Developer',
-		tools: [
-			'React', 'TypeScript', 'SQL', 'Figma',
-		],
-		skills: ['Databases', 'Design'],
-		image: '/projects/pantryPal.jpg',
-		link: '#',
-		linkLabel: 'link',
-	},
-	{
-		id: 3,
 		title: 'DividID',
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -70,7 +48,7 @@ export const projects: Project[] = [
 		linkLabel: 'link',
 	},
 	{
-		id: 4,
+		id: 3,
 		title: 'Tech Availability Dashboard',
 		role: 'Developer',
 		description:
@@ -83,7 +61,7 @@ export const projects: Project[] = [
 		linkLabel: 'link',
 	},
 	{
-		id: 5,
+		id: 4,
 		title: 'COVID-19 Prison Cases Data Analysis GUI',
 		role: 'Developer',
 		description:

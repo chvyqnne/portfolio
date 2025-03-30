@@ -101,7 +101,7 @@ export const FunFactsSection = () => {
 										words={[activeMessage]}
 									/>
 								)}
-								<div className='absolute -bottom-1 left-4 rotate-45 w-4 h-4 bg-white border-l border-b border-fuchsia-200 z-[-1]' />
+								<div className='absolute -bottom-1 left-4 rotate-35 w-4 h-4 bg-white border-b border-fuchsia-200 z-[-1]' />
 							</motion.div> : null}
 						</AnimatePresence>
 
@@ -120,11 +120,11 @@ export const FunFactsSection = () => {
 
 			<FactCardGrid
 				items={[
-					{ label: 'education', content: 'B.S. in Computer Science & Data Science from American University', kaomoji: '(๑•̀ㅂ•́)و✧' },
-					{ label: 'skills', content: 'Full-stack development, UI/UX design, data analysis, Agile collaboration', kaomoji: '┗(＾0＾)┓' },
-					{ label: 'tech stack', content: 'TypeScript, React, Django, Tailwind CSS, PostgreSQL, Go, Python', kaomoji: '(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧' },
+					{ label: 'education', content: 'B.S. in Data Science & Computer Science from American University in Washington, DC', kaomoji: '(๑•̀ㅂ•́)و✧' },
+					{ label: 'skills', content: 'Full-stack development, data analysis & visualization', kaomoji: '┗(＾0＾)┓' },
+					{ label: 'tech stack', content: 'TypeScript, JavaScript, React, React-Query, Django, Tailwind CSS, HTML/CSS, SQL, Go, Python', kaomoji: '(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧' },
 					{ label: 'tools', content: 'Git, Docker, AWS, Postman, Figma, Linux, ServiceNow', kaomoji: '(•̀ᴗ•́)و ̑̑' },
-					{ label: 'hometown', content: 'Waiʻanae, Hawaiʻi', kaomoji: '(*´∀｀)ﾉ🌺' },
+					{ label: 'hometown', content: 'Nānākuli, Hawaiʻi', kaomoji: '(*´∀｀)ﾉ🌺' },
 					{ label: 'languages', content: 'English, learning Mandarin Chinese 中文 + Korean 한국어', kaomoji: '( ˘▽˘)っ♨' },
 					{ label: 'hobbies', content: 'puzzling, hiking, language learning', kaomoji: 'ヾ(＾∇＾)' },
 					{ label: 'personality type', content: 'ENFJ – the warm-hearted, organized type', kaomoji: '(づ｡◕‿‿◕｡)づ' },

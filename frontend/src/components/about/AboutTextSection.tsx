@@ -3,11 +3,6 @@ import { motion } from 'framer-motion';
 import { SoftLiftButton } from '../SoftLiftButton';
 
 export const AboutTextSection = () => {
-	const paragraph = `
-  I graduated from American University with a degree in Computer Science and Data Science and have worked on building web and mobile-friendly tools across the legal, government, and nonprofit sectors.
-  Currently at Independent Project Analysis, I contribute to full-stack application development in an Agile environment, collaborating closely with cross-functional teams to deliver internal tools that support data-driven decision-making.
-  I bring a strong focus on usability, team communication, and operational efficiency, with experience working across the stack using technologies like React, Django, and PostgreSQL.
-`;
 	return (
 		<motion.div
 			animate={{ opacity: 1, y: 0 }}
@@ -32,15 +27,16 @@ export const AboutTextSection = () => {
 				</p>
 			</div>
 			<div className='text-lg leading-relaxed font-dmsans flex flex-wrap gap-x-1 mt-2 md:mt-0'>
-				{paragraph.trim().split(' ').map((word, index) => (
-					<motion.span
-						className='transition-colors py-0.5 rounded-md hover:bg-gradient-to-r from-pink-100 via-fuchsia-200 to-indigo-100'
-						key={index}
-						whileHover={{ backgroundColor: '#fce7f3' }}
-					>
-						{word}
-					</motion.span>
-				))}
+				<p>
+					I&apos;m a Software Engineer based in DC with 2 years of professional experience in
+					full-stack development. I was born and raised in a rural small town on
+					the west coast of Oʻahu, Hawaiʻi. After graduating from American University with my degree in Data Science +
+					Computer Science, I’ve been honing my skills as a full-stack developer with various
+					side projects and through my work at Independent Project Analysis. I am passionate
+					about providing an excellent UX and creating all of my projects with love! I find it
+					extremely rewarding when I can see a project through from start to finish while being
+					involved in the planning and design processes.
+				</p>
 			</div>
 			<div className='mt-10 text-sm flex flex-col gap-3'>
 				<div className='flex flex-row items-center gap-1'>
