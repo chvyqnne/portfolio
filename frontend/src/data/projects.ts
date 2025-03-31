@@ -1,7 +1,12 @@
 export type ProjectSection = {
 	title: string;
-	type: 'text' | 'image' | 'code';
-	content: string;
+	type: 'text' | 'image' | 'code' | 'stats';
+	content: string | ProjectStat[];
+};
+
+export type ProjectStat = {
+	label: string;
+	value: string;
 };
 
 export type Project = {
@@ -30,7 +35,9 @@ export const projects: Project[] = [
 		tools: [
 			'React', 'TypeScript', 'Tailwind CSS', 'Figma',
 		],
-		skills: ['Design', 'Animation'],
+		skills: [
+			'Design Systems', 'UX', 'Component Architecture', 'Scalability', 'Frontend Architecture',
+		],
 		image: '/projects/portfolioSpec.png',
 		imageCaption: 'The original Figma design for this site!',
 		link: '#',
@@ -62,8 +69,21 @@ export const projects: Project[] = [
 - Designed all layout and motion elements in Figma before implementation
 - Created reusable components for project summaries, details, navigation, and UI elements
 - Used Framer Motion for smooth animations and transitions across pages and components
-- Implemented a custom gradient background with pastel boba-float animation to reflect my design personality
-- Made all content data-driven to support scalability and easy updates`,
+- Made all content data-driven to support scalability and easy updates
+- Designed a flexible project structure using a section-based data model to support multiple content types like text, stats, and images
+- Built dynamic rendering logic that maps section types to reusable UI components, making the layout highly extensible`,
+			},
+			{
+				title: 'Stats',
+				type: 'stats',
+				content: [
+					{ value: '1', label: 'Designer, developer, and architect' },
+					{ value: '20+', label: 'Reusable components built from scratch' },
+					{ value: '100%', label: 'Data-driven content structure' },
+					{ value: '∞', label: 'Future content supported (blog, case studies)' },
+					{ value: '1 month', label: 'To design, develop, test, and iterate' },
+					{ value: 'End-to-end', label: 'From vision to build to polish' },
+				],
 			},
 			{
 				title: 'Impact',
@@ -71,29 +91,89 @@ export const projects: Project[] = [
 				content: `- **Improved perceived performance** through lightweight build setup with Vite and asset optimization, reducing initial load time
 - **Enhanced maintainability** by modularizing layout and component structure, streamlining future content additions
 - **Reinforced personal branding** with a consistent visual language and tone, helping differentiate my portfolio from generic developer sites
-- **Reduced friction** in content updates by designing a flexible, section-based project detail system that supports text, images, and more`,
+- **Reduced friction** in content updates by designing a flexible, section-based project detail system that supports text, images, and more
+- **Future-proofed the site** by decoupling layout from content, enabling support for blog posts, charts, case studies, and new formats without code changes`,
 			},
 			{
 				title: 'Reflection',
 				type: 'text',
 				content:
-			'This was a deeply personal and technical project. I challenged myself to apply design thinking from the ground up — from Figma mockups to fluid animations — while also refining my React and TypeScript skills. It also helped me realize that while I enjoy shaping product and visual experience, I’m more drawn to organizing, managing, and aligning project direction than shipping pixels alone. This portfolio now reflects both my technical foundation and my evolving career path.',
+		'This was a deeply personal and technical project. I challenged myself to apply design thinking from the ground up, from Figma mockups to fluid animations, while also refining my React and TypeScript skills. It helped me realize that while I enjoy shaping product and visual experience, I’m more drawn to organizing, managing, and aligning project direction than shipping pixels alone. This portfolio reflects both my technical foundation and my evolving career path.\n\nBuilding this site taught me a lot about reusability, scalability, and maintainability. I designed a system that separates structure from content, making it easy to extend and update. I also deepened my understanding of UX, component architecture, and long-term design thinking. The process showed me that good design isn’t just aesthetic — it’s about structure, intention, and clarity.',
 			},
 		],
 	},
 	{
 		id: 2,
-		title: 'DividID',
+		title: 'Copy & Split Data Tool',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-		timeline: '10/2023 - 03/2024',
-		role: 'Developer',
-		tools: ['Go', 'SQLite'],
-		skills: ['Concurrency', 'Databases'],
+		'A backend tool built in Go to automate the splitting, tracking, and copying of large eDiscovery datasets. It uses concurrency to improve speed, a SQLite database for persistent job state, and websockets for live dashboard updates.',
+		timeline: '2023 Q3 - 2024 Q2',
+		role: 'Lead Developer & PM',
+		tools: [
+			'Go', 'SQLite', 'HTML', 'JavaScript', 'CSS', 'Robocopy',
+		],
+		skills: [
+			'Concurrency', 'Web Development', 'Databases', 'System Design',
+		],
 		image: '/projects/copyTool.png',
-		imageCaption: '',
+		imageCaption: 'System diagram',
 		link: '#',
 		linkLabel: 'link',
+		sections: [
+			{
+				title: 'Overview',
+				type: 'text',
+				content:
+				'I built this internal tool to automate how large eDiscovery datasets were copied and batched. The tool streamlines what was previously a manual, error-prone task — significantly improving copy speed, traceability, and overall reliability. It was recognized with the **Best OKR Project** (Objectives and Key Results) award in both Q1 and Q2 of 2024 at my previous company, Innovative Driven.',
+			},
+			{
+				title: 'Goals',
+				type: 'text',
+				content: `**Project Goals:**
+- Automate the creation and assignment of file batches for processing
+- Speed up file copy workflows using concurrent execution
+- Improve reliability and auditability through job tracking
+
+**Personal Goals:**
+- Lead both development and technical design
+- Apply Go’s concurrency model (goroutines, channels)
+- Design a custom SQLite schema to persist job, file, and batch metadata`,
+			},
+			{
+				title: 'Implementation',
+				type: 'text',
+				content: `- Designed a local SQLite database to track job runs, batch assignments, file metadata, and status logs
+- Built a Go-based web server to host the frontend, manage routes, and handle batch creation and job distribution
+- Used websockets to enable real-time feedback for users via a dashboard: metrics included files processed, size, errors, and elapsed time
+- Implemented concurrent workers (goroutines) that executed \`Robocopy\` jobs in parallel to improve throughput and isolate errors
+- Created a lightweight UI with HTML, JS, and CSS for starting jobs and monitoring batch progress`,
+			},
+			{
+				title: 'Stats',
+				type: 'stats',
+				content: [
+					{ value: '96%', label: 'Faster copy times' },
+					{ value: '4 TB+', label: 'Size of files processed' },
+					{ value: '10+', label: 'Concurrent workers' },
+					{ value: '6 months', label: 'From design to delivery' },
+					{ value: '2', label: 'Company-wide awards won'},
+				],
+			},
+			{
+				title: 'Impact',
+				type: 'text',
+				content: `- **Optimized average file copy time by 96%**, especially for large, multi-volume jobs
+- **Standardized the job pipeline** using schemas and logs stored in SQLite
+- **Increased observability** through a live dashboard with real-time metrics, error feedback, and visual progress tracking
+- **Eliminated manual missteps** in file grouping and batch creation`,
+			},
+			{
+				title: 'Reflection',
+				type: 'text',
+				content:
+				'This was a deeply technical and rewarding project. I got to wear both the developer and PM hats, and learned a lot about systems thinking, database schema design, and Go’s power for concurrency and server-side development. If I could improve one thing, I’d rebuild the interface as a local desktop GUI to better handle firewall and permissions constraints. I’d also introduce structured user testing to polish the interface and reduce cognitive load.',
+			},
+		],
 	},
 	{
 		id: 3,
@@ -109,7 +189,7 @@ export const projects: Project[] = [
 			'API Integration', 'Responsive Design', 'Data Visualization', 'Accessibility',
 		],
 		image: '/projects/libraryDashboard.jpg',
-		imageCaption: '',
+		imageCaption: 'Live dashboard with animated gauges on AU Library website',
 		link: 'https://www.american.edu/library/services/laptops.cfm',
 		linkLabel: 'View Live',
 		sections: [
@@ -135,10 +215,10 @@ export const projects: Project[] = [
 			{
 				title: 'Implementation',
 				type: 'text',
-				content: `- Built a modular JavaScript function (\`techAvailRequest\`) to fetch data from the Alma API
+				content: `- Built a modular JavaScript function to fetch data from the Alma API
 				- Parsed XML subfields to extract availability data for each item
 				- Used DevExpress to render animated SVG gauges with a custom red-orange-green palette
-				- Applied responsive layout techniques with flexbox and \`flex-wrap\` to support all screen sizes
+				- Applied responsive layout techniques to support all screen sizes
 				- Structured content with semantic HTML and minimal CSS to avoid style conflicts with the main site
 				- Conducted QA testing with the university’s systems administrator to meet integration and accessibility requirements`,
 			},

@@ -25,8 +25,7 @@ export const Work = () => {
 
 	const filteredProjects = selectedSkills.length
 		? projects.filter((p) =>
-			p.skills.some((s) => selectedSkills.includes(s)) ||
-		p.tools.some((t) => selectedSkills.includes(t)),
+			selectedSkills.every((s) => p.skills.includes(s) || p.tools.includes(s)),
 		)
 		: projects;
 
@@ -45,7 +44,7 @@ export const Work = () => {
 			initial={{ opacity: 0, y: 30 }}
 			transition={{ duration: 0.6, delay: 0.2 }}
 		>
-			<div className='flex flex-col md:flex-row w-full min-h-screen bg-gradient-to-t from-pink-100 to-white justify-center pt-[50px] px-4 sm:px-6 md:px-10'>
+			<div className='flex flex-col md:flex-row w-full min-h-screen bg-gradient-to-t from-pink-100 to-white justify-center pt-[100px] px-4 sm:px-6 md:px-10'>
 				<div className='flex flex-col'>
 					<div className='flex flex-col md:flex-row w-full max-w-[1400px] gap-10'>
 						<div
@@ -59,7 +58,7 @@ export const Work = () => {
 								allSkills={skills}
 								allTools={tools}
 								clearAll={clearAll}
-								projects={filteredProjects}
+								projects={projects}
 								resultCount={filteredProjects.length}
 								scrollTo={scrollToProject}
 								selectedSkills={selectedSkills}
@@ -81,8 +80,9 @@ export const Work = () => {
 								))}
 							</div>
 						</div>
-
 						<motion.div
+							animate={{ scale: 1, opacity: 1, y: 0 }}
+							initial={{ scale: 0.95, opacity: 0, y: 20 }}
 							whileHover={{
 								y: -6,
 								transition: { duration: 0.3, ease: 'easeInOut' },
@@ -92,7 +92,7 @@ export const Work = () => {
 								allSkills={skills}
 								allTools={tools}
 								clearAll={clearAll}
-								projects={filteredProjects}
+								projects={projects}
 								resultCount={filteredProjects.length}
 								scrollTo={scrollToProject}
 								selectedSkills={selectedSkills}

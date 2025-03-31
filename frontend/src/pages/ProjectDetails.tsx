@@ -6,6 +6,7 @@ import { BackLink } from '../components/projectDetails/BackLink';
 import { ProjectSectionNav } from '../components/projectDetails/ProjectSectionNav';
 import { motion } from 'framer-motion';
 import { ProjectSection } from '../components/projectDetails/ProjectSection';
+import { ProjectStatsGrid } from '../components/projectDetails/ProjectStatsGrid'; // ✅ new import
 
 export const ProjectDetails = () => {
 	const { id } = useParams();
@@ -50,14 +51,29 @@ export const ProjectDetails = () => {
 							/>
 						</div>
 
-						{project.sections?.map((section, index) => (
-							<ProjectSection
-								content={section.content}
-								index={index}
-								key={index}
-								title={section.title}
-							/>
-						))}
+						{project.sections?.map((section, index) => {
+							if (section.type === 'stats' && Array.isArray(section.content)) {
+								return (
+									<div id={`section-${index}`} key={index}>
+										<h2 className='text-2xl font-bold font-dmsans mb-4'>{section.title}</h2>
+										<ProjectStatsGrid stats={section.content} />
+									</div>
+								);
+							}
+
+							if (section.type === 'text' || section.type === 'image' || section.type === 'code') {
+								return (
+									<ProjectSection
+										content={section.content}
+										index={index}
+										key={index}
+										title={section.title}
+									/>
+								);
+							}
+
+							return null;
+						})}
 					</div>
 				</div>
 				<div className='mt-10 mx-6'>
