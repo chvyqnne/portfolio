@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { ExperienceScrollList } from './ExperienceScrollList';
 import { ExperienceDetail } from './ExperienceDetail';
 import { motion } from 'framer-motion';
-import { experience } from '../../data/experience';
+import { experience } from '../../types/experience';
+import { pastelColorClasses } from '../../utils/colorPalette';
 
 export const ExperiencePanel = () => {
 	const [scrollStart, setScrollStart] = useState(0);
@@ -36,12 +37,17 @@ export const ExperiencePanel = () => {
 		if (e.deltaY < 0) scrollUp();
 	};
 
+	const getColorIndex = (index: number) => {
+		return Math.floor((index / experience.length) * pastelColorClasses.length) % pastelColorClasses.length;
+	};
+
 	return (
-		<div className='flex flex-col gap-4 w-full max-w-6xl'>
+		<div className='flex flex-col gap-4 max-w-6xl min-w-6xl'>
 			<div className='flex flex-col md:flex-row gap-6 w-full'>
 				<ExperienceScrollList
 					canScrollDown={canScrollDown}
 					canScrollUp={canScrollUp}
+					colorIndex={getColorIndex(selectedIndex)}
 					items={visibleItems}
 					onScrollDown={scrollDown}
 					onScrollUp={scrollUp}
@@ -66,6 +72,7 @@ export const ExperiencePanel = () => {
 					}}
 				>
 					<ExperienceDetail
+						index={getColorIndex(selectedIndex)}
 						responsibilities={selected.responsibilities}
 						skills={selected.skills}
 						timeline={selected.timeline}

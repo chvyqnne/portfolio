@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { AboutTextSection } from '../components/about/AboutTextSection';
 import { Divider } from '../components/Divider';
 import { FunFactsSection } from '../components/about/FunFactsSection';
@@ -7,8 +6,6 @@ import { motion } from 'framer-motion';
 import { Footer } from '../components/Footer';
 
 export const About = () => {
-	const [lang, setLang] = useState<'en' | 'zh'>('en');
-
 	return (
 		<motion.div
 			animate={{ opacity: 1, y: 0 }}
@@ -19,7 +16,7 @@ export const About = () => {
 			<div className='bg-gradient-to-tr from-fuchsia-50 to-white animate-gradient w-full h-full' id='about-background'>
 				<div className='flex flex-col w-full' id='about-content-container'>
 					<div className='flex flex-col md:flex-row gap-10 justify-center mt-10 mx-6 md:mx-40'>
-						<AboutTextSection lang={lang} setLang={setLang} />
+						<AboutTextSection />
 						<motion.div
 							whileHover={{
 								y: -6,
@@ -32,7 +29,7 @@ export const About = () => {
 					<div className='my-10 mx-6 md:mx-30'>
 						<Divider />
 					</div>
-					<FunFactsSection lang={lang} />
+					<FunFactsSection />
 					<div className='mt-10 mx-6 md:mx-30'>
 						<Footer />
 					</div>

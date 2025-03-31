@@ -15,8 +15,8 @@ type Props = {
 	readonly timeline: string;
 	readonly skills: string[];
 	readonly tools: string[];
-	readonly link: string;
-	readonly linkLabel: string;
+	readonly link?: string;
+	readonly linkLabel?: string;
 	readonly image?: string;
 	readonly imageCaption?: string;
 };
@@ -95,12 +95,14 @@ export const ProjectSummary = ({
 						</div>
 					</div>
 
-					<Button
-						label={linkLabel}
-						link={link}
-						showArrow={true}
-						variant='yellow'
-					/>
+					{link && linkLabel ?
+						<Button
+							label={linkLabel}
+							link={link}
+							showArrow={true}
+							variant='yellow'
+						/> : null}
+					
 				</motion.div>
 
 				{image ?

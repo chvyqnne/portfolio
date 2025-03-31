@@ -17,6 +17,7 @@ type ExperienceScrollListProps = {
 	readonly canScrollUp: boolean;
 	readonly canScrollDown: boolean;
 	readonly onWheel: (e: React.WheelEvent<HTMLDivElement>) => void;
+	readonly colorIndex: number;
 };
 
 export const ExperienceScrollList = ({
@@ -29,6 +30,7 @@ export const ExperienceScrollList = ({
 	canScrollUp,
 	canScrollDown,
 	onWheel,
+	colorIndex,
 }: ExperienceScrollListProps) => {
 	const listRef = useRef<HTMLDivElement>(null);
 
@@ -62,7 +64,7 @@ export const ExperienceScrollList = ({
 	}, [onScrollDown, onScrollUp]);
 
 	return (
-		<div className='w-full md:w-1/2 p-2 flex flex-col'>
+		<div className='w-full md:w-1/2 p-4 flex flex-col'>
 			<div className='flex justify-center mb-4'>
 				<button
 					aria-label='Scroll up'
@@ -74,15 +76,17 @@ export const ExperienceScrollList = ({
 					<ArrowUp />
 				</button>
 			</div>
-			<div className='flex flex-col gap-6 overflow-hidden mb-4' onWheel={onWheel} ref={listRef}>
+			<div className='flex flex-col gap-6 overflow-auto mb-4' onWheel={onWheel} ref={listRef}>
 				{items.map((item, index) => {
 					const actualIndex = scrollStart + index;
 					return (
 						<motion.div
 							key={actualIndex}
+							whileHover={{ y: -6 }}
 							whileTap={{ scale: 0.97 }}
 						>
 							<ExperienceItem
+								colorIndex={colorIndex}
 								company={item.company}
 								onClick={() => { onSelect(actualIndex); }}
 								selected={actualIndex === selectedIndex}

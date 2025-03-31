@@ -4,7 +4,7 @@ import { FilterSidebar } from '../components/work/FilterSidebar';
 import { ProjectCard } from '../components/work/ProjectCard';
 import { MobileFilterDrawer } from '../components/work/MobileFilterDrawer';
 import { Footer } from '../components/Footer';
-import { projects, Project } from '../data/projects';
+import { projects, Project } from '../types/projects';
 
 const getAllSkills = (projectList: Project[]) => {
 	const tools = [...new Set(projectList.flatMap((p) => p.tools))].sort((a, b) => a.localeCompare(b));
@@ -44,7 +44,7 @@ export const Work = () => {
 			initial={{ opacity: 0, y: 30 }}
 			transition={{ duration: 0.6, delay: 0.2 }}
 		>
-			<div className='flex flex-col md:flex-row w-full min-h-screen bg-gradient-to-t from-pink-100 to-white justify-center pt-[100px] px-4 sm:px-6 md:px-10'>
+			<div className='flex flex-col md:flex-row w-full min-h-screen bg-gradient-to-tr from-fuchsia-50 to-white justify-center pt-[100px] px-4 sm:px-6 md:px-10'>
 				<div className='flex flex-col'>
 					<div className='flex flex-col md:flex-row w-full max-w-[1400px] gap-10'>
 						<div

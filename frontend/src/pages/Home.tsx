@@ -1,7 +1,7 @@
 import { IntroCard } from '../components/home/IntroCard';
 import { motion } from 'framer-motion';
 import { Footer } from '../components/Footer';
-import { NavLink } from 'react-router-dom';
+import { NewHereLinks } from '../components/home/NewHereLinks';
 
 export const Home = () => {
 	return (
@@ -11,11 +11,10 @@ export const Home = () => {
 			initial={{ opacity: 0, y: 30 }}
 			transition={{ duration: 0.6, delay: 0.2 }}
 		>
-			<div className='flex overflow-hidden items-center justify-center h-full md:h-screen bg-gradient-to-tr from-fuchsia-100 to-white flex-col gap-10 relative z-10'>
+			<div className='flex overflow-hidden items-center justify-center h-full md:h-screen bg-gradient-to-tr from-fuchsia-50 to-white flex-col gap-10 relative z-10'>
 				<motion.div
 					animate={{ scale: 1, opacity: 1, y: 0 }}
 					initial={{ scale: 0.95, opacity: 0, y: 20 }}
-					transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
 					whileHover={{
 						y: -6,
 						transition: { duration: 0.3, ease: 'easeInOut' },
@@ -24,32 +23,8 @@ export const Home = () => {
 					<IntroCard />
 				</motion.div>
 
-				<div className='text-center mx-4 mt-4 text-lg font-inter text-gray-700 italic'>
-					new here? check out my{' '}
-					<NavLink
-						className='inline-flex items-center font-semibold underline underline-offset-4 decoration-pink-400 hover:text-pink-500 transition-colors'
-						to='/work'
-					>
-						projects
-					</NavLink>
-					,{' '}
-					<NavLink
-						className='inline-flex items-center font-semibold underline underline-offset-4 decoration-pink-400 hover:text-pink-500 transition-colors'
-						to='/experience'
-					>
-						experience
-					</NavLink>
-					, or learn more {' '}
-					<NavLink
-						className='inline-flex items-center font-semibold underline underline-offset-4 decoration-pink-400 hover:text-pink-500 transition-colors'
-						to='/about'
-					>
-						about me
-					</NavLink>
-					<span aria-label='flower' className='emoji-shake ml-1' role='img'>
-						🌸
-					</span>
-				</div>
+				<NewHereLinks />
+
 				<div className='w-[90%]'>
 					<Footer />
 				</div>

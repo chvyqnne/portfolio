@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { Footer } from '../components/Footer';
-import { projects } from '../data/projects';
+import { projects } from '../types/projects';
 import { ProjectSummary } from '../components/projectDetails/ProjectSummary';
 import { BackLink } from '../components/projectDetails/BackLink';
 import { ProjectSectionNav } from '../components/projectDetails/ProjectSectionNav';

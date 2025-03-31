@@ -19,8 +19,8 @@ export type Project = {
 	skills: string[];
 	image: string;
 	imageCaption: string;
-	link: string;
-	linkLabel: string;
+	link?: string;
+	linkLabel?: string;
 	sections?: ProjectSection[];
 };
 
@@ -40,8 +40,6 @@ export const projects: Project[] = [
 		],
 		image: '/projects/portfolioSpec.png',
 		imageCaption: 'The original Figma design for this site!',
-		link: '#',
-		linkLabel: 'link',
 		sections: [
 			{
 				title: 'Overview',
@@ -117,8 +115,6 @@ export const projects: Project[] = [
 		],
 		image: '/projects/copyTool.png',
 		imageCaption: 'System diagram',
-		link: '#',
-		linkLabel: 'link',
 		sections: [
 			{
 				title: 'Overview',
@@ -249,7 +245,5 @@ export const projects: Project[] = [
 		skills: ['Data Visualization', 'Data Analysis', 'Design'],
 		image: '/projects/javaDataAnalysis.jpg',
 		imageCaption: '',
-		link: '#',
-		linkLabel: 'link',
 	},
 ];

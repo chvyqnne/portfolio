@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { ProjectStat } from '../../data/projects';
+import { ProjectStat } from '../../types/projects';
+import { pastelColorClasses } from '../../utils/colorPalette';
 
 type Props = {
 	readonly index: number;
@@ -7,17 +8,9 @@ type Props = {
 	readonly content: string | ProjectStat[];
 };
 
-const colorMap: Record<string, string> = {
-	overview: 'bg-pink-50 border-pink-200 text-pink-700',
-	goals: 'bg-yellow-50 border-yellow-200 text-yellow-700',
-	implementation: 'bg-blue-50 border-blue-200 text-blue-700',
-	reflection: 'bg-lime-50 border-lime-200 text-lime-700',
-	impact: 'bg-indigo-50 border-indigo-200 text-indigo-700',
-};
 
 export const ProjectSection = ({ index, title, content }: Props) => {
-	const normalizedTitle = title.toLowerCase();
-	const colorClass = colorMap[normalizedTitle] || 'bg-white border-black text-black';
+	const colorClass = pastelColorClasses[index % pastelColorClasses.length];
 
 	const parseRichText = (text: string) => {
 		const parts = text.split(/(\*\*.*?\*\*|`.*?`)/g);

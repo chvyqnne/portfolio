@@ -14,7 +14,6 @@ export const IntroCard = () => {
 						cursorStyle='✧'
 						delaySpeed={500}
 						deleteSpeed={50}
-						loop={1}
 						typeSpeed={100}
 						words={['hi i\'m cheyanne!']}
 					/>

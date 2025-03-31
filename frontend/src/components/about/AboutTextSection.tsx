@@ -1,6 +1,12 @@
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
-import { SoftLiftButton } from '../SoftLiftButton';
+import { ContactList } from './ContactList';
+
+const TYPEWRITER_WORDS = [
+	'full stack developer',
+	'matcha enthusiast',
+	'cat lover',
+];
 
 export const AboutTextSection = () => {
 	return (
@@ -21,11 +27,12 @@ export const AboutTextSection = () => {
 							deleteSpeed={30}
 							loop={0}
 							typeSpeed={50}
-							words={['full stack developer', 'matcha enthusiast', 'cat lover']}
+							words={TYPEWRITER_WORDS}
 						/>
 					</span>
 				</p>
 			</div>
+
 			<div className='text-lg leading-relaxed font-dmsans flex flex-wrap gap-x-1 mt-2 md:mt-0'>
 				<p>
 					I&apos;m a Software Engineer based in DC with 2 years of professional experience in
@@ -38,6 +45,7 @@ export const AboutTextSection = () => {
 					involved in the planning and design processes.
 				</p>
 			</div>
+			
 			<div className='mt-10 text-sm flex flex-col gap-3'>
 				<div className='flex flex-row items-center gap-1'>
 					<img
@@ -46,60 +54,7 @@ export const AboutTextSection = () => {
 						src='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cc.svg'/>
 					<p className='text-base font-semibold'>pinned links from my little corner of the internet:</p>
 				</div>
-				<ul className='list-disc list-inside space-y-2'>
-					<li>
-						<span>download my </span>
-						<SoftLiftButton
-							color='pink'
-							download
-							emojiSrc='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4c4.svg'
-							href='/Cabang_Cheyanne_Resume_Dev.pdf'
-						>
-							resume
-						</SoftLiftButton>
-					</li>
-					<li>
-						<span>connect with me on </span>
-						<SoftLiftButton
-							color='purple'
-							emojiSrc='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f44b.svg'
-							href='https://www.linkedin.com/in/ccabang/'
-						>
-							linkedin
-						</SoftLiftButton>
-					</li>
-					<li>
-						<span>send a kind note via </span>
-						<SoftLiftButton
-							color='yellow'
-							email
-							emojiSrc='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f48c.svg'
-							href='mailto:cheyannephongsavath@gmail.com'
-						>
-							email
-						</SoftLiftButton>
-					</li>
-					<li>
-						<span>explore my code on </span>
-						<SoftLiftButton
-							color='blue'
-							emojiSrc='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f431.svg'
-							href='https://github.com/chvyqnne'
-						>
-							github
-						</SoftLiftButton>
-					</li>
-					<li>
-						<span>listen to my playlists on </span>
-						<SoftLiftButton
-							color='green'
-							emojiSrc='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f49a.svg'
-							href='https://open.spotify.com/user/chvyvnne'
-						>
-							spotify
-						</SoftLiftButton>
-					</li>
-				</ul>
+				<ContactList />
 			</div>
 		</motion.div>
 	);

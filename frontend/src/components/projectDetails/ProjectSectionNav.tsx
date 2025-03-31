@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { pastelColorClasses } from '../../utils/colorPalette';
 
 type Props = {
 	readonly sections?: readonly { readonly title: string }[];
@@ -33,7 +34,7 @@ export const ProjectSectionNav = ({ sections }: Props) => {
 				<li>
 					<a
 						className={`block px-3 py-1 rounded-md transition-colors ${
-							activeSection === 'summary' ? 'bg-yellow-100 text-yellow-600' : 'hover:text-yellow-600'
+							activeSection === 'summary' ? 'bg-gray-100 text-gray-800' : 'hover:text-yellow-600'
 						}`}
 						href='#summary'
 					>
@@ -43,12 +44,13 @@ export const ProjectSectionNav = ({ sections }: Props) => {
 				{sections?.map((section, index) => {
 					const sectionId = `section-${index}`;
 					const isActive = activeSection === sectionId;
+					const colorClass = pastelColorClasses[(index) % pastelColorClasses.length];
 
 					return (
 						<li key={index}>
 							<a
 								className={`block px-3 py-1 rounded-md transition-colors ${
-									isActive ? 'bg-yellow-100 text-yellow-600' : 'hover:text-yellow-600'
+									isActive ? colorClass : 'hover:text-yellow-600'
 								}`}
 								href={`#${sectionId}`}
 							>

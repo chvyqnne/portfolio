@@ -1,11 +1,12 @@
 import React from 'react';
+import { pastelColorMap, pastelShadows } from '../utils/colorPalette';
 
 export type SoftLiftButtonProps = {
 	readonly href: string;
 	readonly children: React.ReactNode;
 	readonly emojiSrc: string;
 	readonly download?: boolean;
-	readonly color?: string;
+	readonly color?: keyof typeof pastelColorMap;
 	readonly email?: boolean;
 };
 
@@ -17,23 +18,8 @@ export const SoftLiftButton = ({
 	color = 'pink',
 	email = false,
 }: SoftLiftButtonProps) => {
-	const colorStyles: Record<string, string> = {
-		pink: 'bg-pink-50 border-pink-200 text-pink-700 hover:text-pink-500',
-		purple: 'bg-purple-50 border-purple-200 text-purple-700 hover:text-purple-500',
-		yellow: 'bg-yellow-50 border-yellow-200 text-yellow-700 hover:text-yellow-500',
-		blue: 'bg-blue-50 border-blue-200 text-blue-700 hover:text-blue-500',
-		green: 'bg-green-50 border-green-200 text-green-700 hover:text-green-500',
-	};
-
-	const styleClass = colorStyles[color] || colorStyles.pink;
-
-	const shadowColor = {
-		pink: '#F9A8D4',
-		purple: '#E1BEE7',
-		yellow: '#FDE68A',
-		blue: '#BFDBFE',
-		green:'#A7F3D0',
-	}[color] || '#E1BEE7';
+	const styleClass = pastelColorMap[color] || pastelColorMap.pink;
+	const shadowColor = pastelShadows[color] || pastelShadows.pink;
 
 	return (
 		<a
