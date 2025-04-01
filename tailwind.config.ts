@@ -9,12 +9,10 @@ const config: Config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: 'var(--font-inter)',
 				ibm: 'var(--font-ibm)',
 				dmsans: 'var(--font-dmsans)',
 				cardo: 'var(--font-cardo)',
 				inter: 'var(--font-inter)',
-				ptSerif: 'var(--font-pt-serif)',
 			},
 			screens: {
 				'sm': '640px',
