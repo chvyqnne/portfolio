@@ -38,7 +38,7 @@ export const projects: Project[] = [
 		skills: [
 			'Design Systems', 'UX', 'Component Architecture', 'Scalability', 'Frontend Architecture',
 		],
-		image: '/projects/portfolioSpec.png',
+		image: '/images/portfolioSpec.png',
 		imageCaption: 'The original Figma design for this site!',
 		sections: [
 			{
@@ -113,7 +113,7 @@ export const projects: Project[] = [
 		skills: [
 			'Concurrency', 'Web Development', 'Databases', 'System Design',
 		],
-		image: '/projects/copyTool.png',
+		image: '/images/copyTool.png',
 		imageCaption: 'System diagram',
 		sections: [
 			{
@@ -184,7 +184,7 @@ export const projects: Project[] = [
 		skills: [
 			'API Integration', 'Responsive Design', 'Data Visualization', 'Accessibility',
 		],
-		image: '/projects/libraryDashboard.jpg',
+		image: '/images/libraryDashboard.jpg',
 		imageCaption: 'Live dashboard with animated gauges on AU Library website',
 		link: 'https://www.american.edu/library/services/laptops.cfm',
 		linkLabel: 'View Live',
@@ -243,7 +243,7 @@ export const projects: Project[] = [
 		timeline: '04/2021 - 05/2021',
 		tools: ['Java', 'JavaFX'],
 		skills: ['Data Visualization', 'Data Analysis', 'Design'],
-		image: '/projects/javaDataAnalysis.jpg',
+		image: '/images/javaDataAnalysis.jpg',
 		imageCaption: '',
 	},
 ];
