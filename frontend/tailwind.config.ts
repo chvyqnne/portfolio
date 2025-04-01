@@ -7,13 +7,6 @@ const config: Config = {
 		'./src/**/*.{ts,tsx}',
 	],
 	theme: {
-		screens: {
-			'sm': '640px',
-			'md': '768px',
-			'lg': '1024px',
-			'xl': '1280px',
-			'2xl': '1536px',
-		},
 		extend: {
 			fontFamily: {
 				sans: 'var(--font-inter)',
@@ -22,6 +15,13 @@ const config: Config = {
 				cardo: 'var(--font-cardo)',
 				inter: 'var(--font-inter)',
 				ptSerif: 'var(--font-pt-serif)',
+			},
+			screens: {
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
+				'2xl': '1536px',
 			},
 		},
 	},

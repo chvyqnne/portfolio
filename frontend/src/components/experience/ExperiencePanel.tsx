@@ -42,7 +42,7 @@ export const ExperiencePanel = () => {
 	};
 
 	return (
-		<div className='flex flex-col gap-4 max-w-6xl min-w-6xl'>
+		<div className='flex flex-col gap-4 md:max-w-6xl md:min-w-6xl'>
 			<div className='flex flex-col md:flex-row gap-6 w-full'>
 				<ExperienceScrollList
 					canScrollDown={canScrollDown}
