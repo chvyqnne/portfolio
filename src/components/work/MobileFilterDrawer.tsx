@@ -26,7 +26,7 @@ export const MobileFilterDrawer = ({
 	const [open, setOpen] = useState(false);
 
 	return (
-		<div className='md:hidden w-full px-4'>
+		<div className='lg:hidden w-full px-4'>
 			<button
 				className='w-full bg-pink-400 text-white mb-10 py-2 px-4 rounded-full border border-black font-semibold hover:bg-pink-600 transition-colors'
 				onClick={() => { setOpen(!open); }}

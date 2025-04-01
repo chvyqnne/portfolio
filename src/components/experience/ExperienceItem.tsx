@@ -44,7 +44,7 @@ export const ExperienceItem = ({
 
 			<div className='flex flex-col justify-center ml-12'>
 				<p className={`text-4xl font-inter font-bold ${selected ? textColor : 'text-gray-800'}`}>{title}</p>
-				<p className='text-sm text-gray-600 font-inter'>{company}</p>
+				<p className='italic text-sm text-gray-600 font-inter'>{company}</p>
 			</div>
 		</div>
 	);

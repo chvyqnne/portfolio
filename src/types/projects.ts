@@ -32,12 +32,8 @@ export const projects: Project[] = [
 			'Personal website to showcase my work, skills, and background as a developer. Built with a component-based structure and animated UI to highlight projects in an engaging and organized way.',
 		timeline: '03/2025 - 04/2025',
 		role: 'Developer',
-		tools: [
-			'React', 'TypeScript', 'Tailwind CSS', 'Figma',
-		],
-		skills: [
-			'Design Systems', 'UX', 'Component Architecture', 'Scalability', 'Frontend Architecture',
-		],
+		tools: ['React', 'TypeScript', 'Tailwind CSS'],
+		skills: ['Design Systems', 'UX', 'Scalability'],
 		image: '/images/portfolioSpec.png',
 		imageCaption: 'The original Figma design for this site!',
 		sections: [
@@ -105,7 +101,7 @@ export const projects: Project[] = [
 		title: 'Copy & Split Data Tool',
 		description:
 		'A backend tool built in Go to automate the splitting, tracking, and copying of large eDiscovery datasets. It uses concurrency to improve speed, a SQLite database for persistent job state, and websockets for live dashboard updates.',
-		timeline: '2023 Q3 - 2024 Q2',
+		timeline: '10/2023 - 04/2024',
 		role: 'Lead Developer & PM',
 		tools: [
 			'Go', 'SQLite', 'HTML', 'JavaScript', 'CSS', 'Robocopy',
@@ -233,17 +229,5 @@ export const projects: Project[] = [
 				content: 'This was my first real solo development project, and I faced a lot of learning curves. I had no experience with XML or third-party UI libraries, and initially struggled to understand how to extract the data I needed. I even tried building my own gauges before switching to DevExpress, which gave me the professional look and interactivity I wanted. Although progress felt slow at times, I came out of this project with stronger debugging skills, a deeper understanding of APIs, and the confidence to build something that is still live and used by students today.',
 			},
 		],
-	},
-	{
-		id: 4,
-		title: 'COVID-19 Prison Cases Data Analysis GUI',
-		role: 'Developer',
-		description:
-			'Created a desktop application using JavaFX to visualize and analyze COVID-19 prison case data as part of a programming course project. Designed with interactive charts and a clean interface to highlight key data trends for non-technical users.',
-		timeline: '04/2021 - 05/2021',
-		tools: ['Java', 'JavaFX'],
-		skills: ['Data Visualization', 'Data Analysis', 'Design'],
-		image: '/images/javaDataAnalysis.jpg',
-		imageCaption: '',
 	},
 ];

@@ -16,7 +16,7 @@ export const AboutTextSection = () => {
 			initial={{ opacity: 0, y: 30 }}
 			transition={{ duration: 0.6, delay: 0.2 }}
 		>
-			<div className='text-3xl mb-3'>
+			<div className='text-3xl mb-3 min-h-[100px] lg:min-h-[0px]'>
 				<p>nice to meet you!</p>
 				<p className='text-3xl'>
 					i&apos;m cheyanne,&nbsp;
@@ -35,12 +35,11 @@ export const AboutTextSection = () => {
 
 			<div className='text-lg leading-relaxed font-dmsans flex flex-wrap gap-x-1 mt-2 md:mt-0'>
 				<p>
-					I&apos;m a Software Engineer based in DC with 2 years of professional experience in
-					full-stack development. I was born and raised in a rural small town on
-					the west coast of Oʻahu, Hawaiʻi. After graduating from American University with my degree in Data Science +
-					Computer Science, I’ve been honing my skills as a full-stack developer with various
-					side projects and through my work at Independent Project Analysis. I am passionate
-					about providing an excellent UX and creating all of my projects with love! I find it
+					I&apos;m a dev based in Northern Virginia/DC with 1 year of professional experience in
+					full-stack development and 4 years spent doing summer and year-round tech internships while in school.
+					I&apos;ve been fortunate to explore the different facets of programming, from data science and machine learning
+					to developing web apps and databases. I was born and raised in a rural small town on the west coast of Oʻahu, Hawaiʻi.
+					I am passionate about providing an excellent UX and creating all of my projects with love! I find it
 					extremely rewarding when I can see a project through from start to finish while being
 					involved in the planning and design processes.
 				</p>

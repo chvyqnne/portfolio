@@ -44,9 +44,9 @@ export const Work = () => {
 			initial={{ opacity: 0, y: 30 }}
 			transition={{ duration: 0.6, delay: 0.2 }}
 		>
-			<div className='flex flex-col md:flex-row w-full min-h-screen bg-gradient-to-tr from-fuchsia-50 to-white justify-center pt-[100px] px-4 sm:px-6 md:px-10'>
+			<div className='flex flex-col lg:flex-row w-full min-h-screen bg-gradient-to-tr from-fuchsia-50 to-white justify-center lg:pt-8 px-4 sm:px-6 lg:px-10'>
 				<div className='flex flex-col'>
-					<div className='flex flex-col md:flex-row w-full max-w-[1400px] gap-10'>
+					<div className='flex flex-col lg:flex-row w-full max-w-[1400px] gap-10'>
 						<div
 							className='flex-1 overflow-y-auto pr-4'
 							style={{
@@ -100,7 +100,7 @@ export const Work = () => {
 							/>
 						</motion.div>
 					</div>
-					<div className='mt-10 md:mt-20'>
+					<div className='mt-10 lg:mt-20'>
 						<Footer
 						/>
 					</div>

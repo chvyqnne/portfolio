@@ -14,12 +14,12 @@ export const experience: Experience[] = [
 		company: 'Independent Project Analysis',
 		timeline: '01/2025 - Present',
 		skills: [
-			'React', 'Django', 'Tailwind CSS', 'PostgreSQL',
+			'React', 'Django', 'Tailwind CSS', 'PostgreSQL', 'Git',
 		],
 		responsibilities: [
-			'Built and maintained full-stack applications in a Linux environment',
-			'Collaborated with cross-functional teams in Agile workflows',
+			'Architecting and developing 5+ web- and mobile-friendly full-stack applications in Linux',
 			'Implemented responsive design and clean UI/UX',
+			'Collaborating in an Agile environment with developers, designers, and stakeholders to deliver high-quality products',
 		],
 	},
 	{

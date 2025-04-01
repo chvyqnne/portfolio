@@ -32,7 +32,7 @@ export const IntroCard = () => {
 					src='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f469-1f3fb-200d-1f4bb.svg'
 				/>
 				<p className='font-ibm text-[18px]'>
-					full stack engineer
+					full stack developer
 				</p>
 			</div>
 

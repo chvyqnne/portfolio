@@ -26,9 +26,8 @@ export const FilterSidebar = ({
 
 	const variantClasses =
         variant === 'desktop'
-        	? 'hidden md:flex w-[350px] sticky top-20'
+        	? 'hidden lg:flex w-[350px] sticky top-20'
         	: 'block w-full';
-
 
 	return (
 		<div className={`${baseClasses} ${variantClasses}`}>

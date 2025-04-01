@@ -20,7 +20,12 @@ export const ExperiencePanel = () => {
 		if (canScrollUp) {
 			const newStart = scrollStart - 1;
 			setScrollStart(newStart);
-			setSelectedIndex(newStart);
+
+			if (selectedIndex > newStart + visibleCount - 1) {
+				setSelectedIndex(newStart + visibleCount - 1);
+			} else if (selectedIndex < newStart) {
+				setSelectedIndex(newStart);
+			}
 		}
 	};
 
@@ -28,7 +33,12 @@ export const ExperiencePanel = () => {
 		if (canScrollDown) {
 			const newStart = scrollStart + 1;
 			setScrollStart(newStart);
-			setSelectedIndex(newStart);
+
+			if (selectedIndex < newStart) {
+				setSelectedIndex(newStart);
+			} else if (selectedIndex > newStart + visibleCount - 1) {
+				setSelectedIndex(newStart + visibleCount - 1);
+			}
 		}
 	};
 
@@ -42,8 +52,8 @@ export const ExperiencePanel = () => {
 	};
 
 	return (
-		<div className='flex flex-col gap-4 md:max-w-6xl md:min-w-6xl'>
-			<div className='flex flex-col md:flex-row gap-6 w-full'>
+		<div className='flex flex-col gap-4 lg:max-w-6xl lg:min-w-6xl'>
+			<div className='flex flex-col lg:flex-row gap-6 w-full'>
 				<ExperienceScrollList
 					canScrollDown={canScrollDown}
 					canScrollUp={canScrollUp}
