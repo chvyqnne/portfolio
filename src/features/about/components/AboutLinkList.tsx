@@ -1,9 +1,8 @@
-import { SoftLiftButton, SoftLiftButtonProps } from './ui/SoftLiftButton';
+import { SoftLiftButton } from '../../../components/ui/SoftLiftButton';
 
-const SPACER = '✿';
-
-const contactButtons: (SoftLiftButtonProps & { children: string })[] = [
+const contactItems = [
 	{
+		label: 'download my ',
 		color: 'pink',
 		href: '/Cabang_Cheyanne_Resume_Dev.pdf',
 		emojiSrc: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4c4.svg',
@@ -11,12 +10,14 @@ const contactButtons: (SoftLiftButtonProps & { children: string })[] = [
 		children: 'resume',
 	},
 	{
+		label: 'connect with me on ',
 		color: 'purple',
 		href: 'https://www.linkedin.com/in/ccabang/',
 		emojiSrc: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f44b.svg',
 		children: 'linkedin',
 	},
 	{
+		label: 'send a kind note via ',
 		color: 'yellow',
 		href: 'mailto:cheyannephongsavath@gmail.com',
 		emojiSrc: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f48c.svg',
@@ -24,23 +25,30 @@ const contactButtons: (SoftLiftButtonProps & { children: string })[] = [
 		children: 'email',
 	},
 	{
+		label: 'explore my code on ',
 		color: 'blue',
 		href: 'https://github.com/chvyqnne',
 		emojiSrc: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f431.svg',
 		children: 'github',
 	},
-];
+	{
+		label: 'listen to my playlists on ',
+		color: 'green',
+		href: 'https://open.spotify.com/user/chvyvnne',
+		emojiSrc: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f49a.svg',
+		children: 'spotify',
+	},
+] as const;
 
-export const LinkList = () => {
+export const AboutLinkList = () => {
 	return (
-		<div className='flex md:flex-row gap-2 items-center text-[14px] font-ibm flex-wrap'>
-			{contactButtons.map(({ children, ...props }, index) => (
-				<div className='flex items-center gap-2' key={children}>
-					<SoftLiftButton {...props}>{children}</SoftLiftButton>
-					{index < contactButtons.length - 1 ? <span>{SPACER}</span> : null}
-				</div>
+		<ul className='list-disc list-inside space-y-2'>
+			{contactItems.map((item) => (
+				<li key={item.children.toString()}>
+					<span>{item.label}</span>
+					<SoftLiftButton {...item}>{item.children}</SoftLiftButton>
+				</li>
 			))}
-
-		</div>
+		</ul>
 	);
 };

@@ -1,13 +1,13 @@
 /* eslint-disable import/no-default-export */
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/layout/Navbar';
-import { Home } from './pages/Home';
-import { About } from './pages/About';
-import { Experience } from './pages/Experience';
-import { Work } from './pages/Work';
-import { ProjectDetails } from './pages/ProjectDetails';
+import { About } from './features/about/About';
+import { Experience } from './features/experience/Experience';
+import { Work } from './features/work/Work';
+import { ProjectDetails } from './features/projectDetails/ProjectDetails';
 import { useState } from 'react';
 import { ContactForm } from './components/ContactForm';
+import { Home } from './features/home/Home';
 
 const App = () => {
 	const [contactOpen, setContactOpen] = useState(false);

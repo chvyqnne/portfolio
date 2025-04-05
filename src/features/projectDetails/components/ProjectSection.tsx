@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { ProjectStat } from '../../types/projects';
-import { pastelColorClasses } from '../../utils/colorPalette';
+import { ProjectStat } from '../../../types/projects';
+import { pastelColorClasses } from '../../../utils/colorPalette';
+
 
 type Props = {
 	readonly index: number;

@@ -1,7 +1,7 @@
-import { IntroCard } from '../components/home/IntroCard';
 import { motion } from 'framer-motion';
-import { Footer } from '../components/layout/Footer';
-import { NewHereLinks } from '../components/home/NewHereLinks';
+import { Footer } from '../../components/layout/Footer';
+import { IntroCard } from './components/IntroCard';
+import { NewHereLinks } from './components/NewHereLinks';
 
 export const Home = () => {
 	return (

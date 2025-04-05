@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { pastelColorClasses } from '../../utils/colorPalette';
+import { pastelColorClasses } from '../../../utils/colorPalette';
 
 type Props = {
 	readonly sections?: readonly { readonly title: string }[];

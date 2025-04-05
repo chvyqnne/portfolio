@@ -1,10 +1,10 @@
 import { useState , useRef } from 'react';
 import { motion } from 'framer-motion';
-import { FilterSidebar } from '../components/work/FilterSidebar';
-import { ProjectCard } from '../components/work/ProjectCard';
-import { MobileFilterDrawer } from '../components/work/MobileFilterDrawer';
-import { Footer } from '../components/layout/Footer';
-import { projects, Project } from '../types/projects';
+import { Footer } from '../../components/layout/Footer';
+import { projects, Project } from '../../types/projects';
+import { FilterSidebar } from './components/FilterSidebar';
+import { MobileFilterDrawer } from './components/MobileFilterDrawer';
+import { ProjectCard } from './components/ProjectCard';
 
 const getAllSkills = (projectList: Project[]) => {
 	const tools = [...new Set(projectList.flatMap((p) => p.tools))].sort((a, b) => a.localeCompare(b));

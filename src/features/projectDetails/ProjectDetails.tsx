@@ -1,12 +1,12 @@
 import { useParams } from 'react-router-dom';
-import { Footer } from '../components/layout/Footer';
-import { projects } from '../types/projects';
-import { ProjectSummary } from '../components/projectDetails/ProjectSummary';
-import { BackLink } from '../components/projectDetails/BackLink';
-import { ProjectSectionNav } from '../components/projectDetails/ProjectSectionNav';
+import { Footer } from '../../components/layout/Footer';
+import { projects } from '../../types/projects';
 import { motion } from 'framer-motion';
-import { ProjectSection } from '../components/projectDetails/ProjectSection';
-import { ProjectStatsGrid } from '../components/projectDetails/ProjectStatsGrid'; // ✅ new import
+import { BackLink } from './components/BackLink';
+import { ProjectSection } from './components/ProjectSection';
+import { ProjectSectionNav } from './components/ProjectSectionNav';
+import { ProjectStatsGrid } from './components/ProjectStatsGrid';
+import { ProjectSummary } from './components/ProjectSummary';
 
 export const ProjectDetails = () => {
 	const { id } = useParams();

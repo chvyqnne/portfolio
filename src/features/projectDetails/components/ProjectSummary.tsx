@@ -1,4 +1,3 @@
-import { Button } from '../ui/Button';
 import { motion } from 'framer-motion';
 import {
 	BriefcaseIcon,
@@ -7,6 +6,7 @@ import {
 	LightBulbIcon,
 } from '@heroicons/react/24/solid';
 import { ImageModal } from './ImageModal';
+import { Button } from '../../../components/ui/Button';
 
 type Props = {
 	readonly title: string;

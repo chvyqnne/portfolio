@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { pastelColorClasses } from '../../utils/colorPalette';
+import { pastelColorClasses } from '../../../utils/colorPalette';
 
 type FactCard = {
 	label: string;

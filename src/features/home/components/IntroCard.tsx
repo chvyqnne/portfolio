@@ -1,5 +1,5 @@
 import { Typewriter } from 'react-simple-typewriter';
-import { LinkList } from '../LinkList';
+import { LinkList } from '../../../components/ui/LinkList';
 
 export const IntroCard = () => {
 	return (

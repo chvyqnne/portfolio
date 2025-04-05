@@ -1,4 +1,4 @@
-import { pastelColorClasses } from '../../utils/colorPalette';
+import { pastelColorClasses } from '../../../utils/colorPalette';
 
 type ExperienceItemProps = {
 	readonly year: string;

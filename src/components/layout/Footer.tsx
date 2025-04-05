@@ -1,4 +1,4 @@
-import { LinkList } from '../LinkList';
+import { LinkList } from '../ui/LinkList';
 import { Divider } from './Divider';
 
 type FooterProps = {

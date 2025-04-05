@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '../ui/Button';
 import { XMarkIcon } from '@heroicons/react/24/solid';
+import { Button } from '../../../components/ui/Button';
 
 type Props = {
 	readonly id: number;

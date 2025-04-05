@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { ExperienceScrollList } from './ExperienceScrollList';
 import { ExperienceDetail } from './ExperienceDetail';
 import { motion } from 'framer-motion';
-import { experience } from '../../types/experience';
-import { pastelColorClasses } from '../../utils/colorPalette';
+import { experience } from '../../../types/experience';
+import { pastelColorClasses } from '../../../utils/colorPalette';
 
 export const ExperiencePanel = () => {
 	const [scrollStart, setScrollStart] = useState(0);
