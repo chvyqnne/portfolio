@@ -5,11 +5,11 @@ type Props = {
 export const ContactButton = ({ onClick }: Props) => {
 	return (
 		<button
-			className='border rounded-md px-2 py-1 hover:bg-pink-400 hover:text-white hover:border-pink-500'
-			onClick={onClick}
 			type='button'
+			onClick={onClick}
+			className='px-4 py-2 text-sm font-semibold text-pink-700 bg-pink-50 border border-pink-200 rounded-xl hover:bg-gradient-to-r hover:from-pink-200 hover:to-rose-400 hover:text-white'
 		>
-			contact
+			contact ✧
 		</button>
 	);
 };
