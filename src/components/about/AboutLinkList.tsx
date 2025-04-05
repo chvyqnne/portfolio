@@ -1,4 +1,4 @@
-import { SoftLiftButton } from '../SoftLiftButton';
+import { SoftLiftButton } from '../ui/SoftLiftButton';
 
 const contactItems = [
 	{
@@ -40,7 +40,7 @@ const contactItems = [
 	},
 ] as const;
 
-export const ContactList = () => {
+export const AboutLinkList = () => {
 	return (
 		<ul className='list-disc list-inside space-y-2'>
 			{contactItems.map((item) => (

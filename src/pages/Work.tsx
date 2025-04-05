@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FilterSidebar } from '../components/work/FilterSidebar';
 import { ProjectCard } from '../components/work/ProjectCard';
 import { MobileFilterDrawer } from '../components/work/MobileFilterDrawer';
-import { Footer } from '../components/Footer';
+import { Footer } from '../components/layout/Footer';
 import { projects, Project } from '../types/projects';
 
 const getAllSkills = (projectList: Project[]) => {

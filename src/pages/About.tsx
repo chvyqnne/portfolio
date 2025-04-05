@@ -1,9 +1,9 @@
 import { AboutTextSection } from '../components/about/AboutTextSection';
-import { Divider } from '../components/Divider';
+import { Divider } from '../components/layout/Divider';
 import { FunFactsSection } from '../components/about/FunFactsSection';
 import { ImageCard } from '../components/about/ImageCard';
 import { motion } from 'framer-motion';
-import { Footer } from '../components/Footer';
+import { Footer } from '../components/layout/Footer';
 
 export const About = () => {
 	return (

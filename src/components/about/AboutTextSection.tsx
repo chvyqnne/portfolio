@@ -1,6 +1,6 @@
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
-import { ContactList } from './ContactList';
+import { AboutLinkList } from './AboutLinkList';
 
 const TYPEWRITER_WORDS = [
 	'full stack developer',
@@ -53,7 +53,7 @@ export const AboutTextSection = () => {
 						src='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cc.svg'/>
 					<p className='text-base font-semibold'>pinned links from my little corner of the internet:</p>
 				</div>
-				<ContactList />
+				<AboutLinkList />
 			</div>
 		</motion.div>
 	);

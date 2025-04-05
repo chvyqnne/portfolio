@@ -1,6 +1,6 @@
 /* eslint-disable import/no-default-export */
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navbar } from './components/Navbar';
+import { Navbar } from './components/layout/Navbar';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Experience } from './pages/Experience';

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ExperiencePanel } from '../components/experience/ExperiencePanel';
-import { Footer } from '../components/Footer';
+import { Footer } from '../components/layout/Footer';
 
 export const Experience = () => {
 	return (

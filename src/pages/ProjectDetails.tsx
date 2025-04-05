@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { Footer } from '../components/Footer';
+import { Footer } from '../components/layout/Footer';
 import { projects } from '../types/projects';
 import { ProjectSummary } from '../components/projectDetails/ProjectSummary';
 import { BackLink } from '../components/projectDetails/BackLink';

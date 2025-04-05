@@ -1,5 +1,5 @@
 import React from 'react';
-import { pastelColorMap, pastelShadows } from '../utils/colorPalette';
+import { pastelColorMap, pastelShadows } from '../../utils/colorPalette';
 
 export type SoftLiftButtonProps = {
 	readonly href: string;

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '../Button';
+import { Button } from '../ui/Button';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 
 type Props = {

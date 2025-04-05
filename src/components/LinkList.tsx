@@ -1,4 +1,4 @@
-import { SoftLiftButton, SoftLiftButtonProps } from './SoftLiftButton';
+import { SoftLiftButton, SoftLiftButtonProps } from './ui/SoftLiftButton';
 
 const SPACER = '✿';
 
@@ -31,7 +31,7 @@ const contactButtons: (SoftLiftButtonProps & { children: string })[] = [
 	},
 ];
 
-export const Contact = () => {
+export const LinkList = () => {
 	return (
 		<div className='flex md:flex-row gap-2 items-center text-[14px] font-ibm flex-wrap'>
 			{contactButtons.map(({ children, ...props }, index) => (

@@ -1,5 +1,5 @@
 import { Typewriter } from 'react-simple-typewriter';
-import { Contact } from '../Contact';
+import { LinkList } from '../LinkList';
 
 export const IntroCard = () => {
 	return (
@@ -44,7 +44,7 @@ export const IntroCard = () => {
 				/>
 				<p className='font-ibm text-[18px]'>AU grad based in the DMV</p>
 			</div>
-			<Contact />
+			<LinkList />
 		</div>
 	);
 };

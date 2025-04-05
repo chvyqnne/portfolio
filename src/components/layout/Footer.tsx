@@ -1,4 +1,4 @@
-import { Contact } from './Contact';
+import { LinkList } from '../LinkList';
 import { Divider } from './Divider';
 
 type FooterProps = {
@@ -12,7 +12,7 @@ export const Footer = ({
 		<div>
 			<Divider />
 			<div className='w-full text-end md:pr-14 md:pt-10 font-inter text-xs'>
-				{contact ? (<Contact />) : null}
+				{contact ? (<LinkList />) : null}
 				<p>made with ❤️ by @chvyn</p>
 			</div>
 		</div>
