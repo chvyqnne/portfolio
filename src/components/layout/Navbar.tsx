@@ -1,8 +1,12 @@
 /* eslint-disable react/no-unused-prop-types */
 import { NavLink } from 'react-router-dom';
-import { ContactForm } from '../ContactForm';
+import { ContactButton } from '../ui/ContactButton';
 
-export const Navbar = () => {
+type Props = {
+	readonly onContactClick: () => void;
+};
+
+export const Navbar = ({ onContactClick }: Props) => {
 	return (
 		<nav className='fixed top-0 left-0 w-full py-4 z-50 backdrop-filter backdrop-blur-lg bg-opacity-70 bg-white'>
 			<div className='max-w-6xl mx-auto flex flex-col md:justify-between md:flex-row items-center px-6'>
@@ -38,9 +42,8 @@ export const Navbar = () => {
 							</div>
 						))}
 					</div>
-					<div>
-						<ContactForm />
-					</div>
+					<ContactButton onClick={onContactClick} />
+					<div />
 				</div>
 			</div>
 		</nav>

@@ -25,8 +25,7 @@ export const Work = () => {
 
 	const filteredProjects = selectedSkills.length
 		? projects.filter((p) =>
-			selectedSkills.every((s) => p.skills.includes(s) || p.tools.includes(s)),
-		)
+			selectedSkills.some((s) => p.skills.includes(s) || p.tools.includes(s))		)
 		: projects;
 
 	const { tools, skills } = getAllSkills(projects);
@@ -50,7 +49,7 @@ export const Work = () => {
 						<div
 							className='flex-1 overflow-y-auto pr-4'
 							style={{
-								maxHeight: 'calc(80vh - 140px)',
+								maxHeight: 'calc(80vh - 10px)',
 								paddingRight: '1rem',
 							}}
 						>
@@ -64,20 +63,26 @@ export const Work = () => {
 								selectedSkills={selectedSkills}
 								toggleSkill={toggleSkill}
 							/>
-							<div className='flex flex-col gap-20'>
-								{filteredProjects.map((project) => (
-									<ProjectCard
-										description={project.description}
-										id={project.id}
-										image={project.image}
-										innerRef={(el) => (projectRefs.current[project.id] = el)}
-										key={project.id}
-										skills={project.skills}
-										timeline={project.timeline}
-										title={project.title}
-										tools={project.tools}
-									/>
-								))}
+							<div className='flex flex-col gap-20 min-h-[200px]'>
+								{filteredProjects.length > 0 ? (
+									filteredProjects.map((project) => (
+										<ProjectCard
+											description={project.description}
+											id={project.id}
+											image={project.image}
+											innerRef={(el) => (projectRefs.current[project.id] = el)}
+											key={project.id}
+											skills={project.skills}
+											timeline={project.timeline}
+											title={project.title}
+											tools={project.tools}
+										/>
+									))
+								) : (
+									<div className='text-center text-gray-500 font-inter text-lg pt-10'>
+										No matching projects found (｡•́︿•̀｡)
+									</div>
+								)}
 							</div>
 						</div>
 						<motion.div

@@ -127,7 +127,7 @@ export const FunFactsSection = () => {
 					{ label: 'hometown', content: 'Nānākuli, Hawaiʻi', kaomoji: '(*´∀｀)ﾉ🌺' },
 					{ label: 'languages', content: 'English, learning Mandarin Chinese 中文 + Korean 한국어', kaomoji: '( ˘▽˘)っ♨' },
 					{ label: 'hobbies', content: 'puzzling, hiking, language learning', kaomoji: 'ヾ(＾∇＾)' },
-					{ label: 'personality type', content: 'ENFJ – the warm-hearted, organized type', kaomoji: '(づ｡◕‿‿◕｡)づ' },
+					{ label: 'personality type', content: 'ENFJ: the Protagonist', kaomoji: '(づ｡◕‿‿◕｡)づ' },
 					{ label: 'drink order', content: 'iced matcha latte with vanilla and oat milk', kaomoji: '₍˶ᵔ ᵕ ᵔ˶₎🍵' },
 				]}
 			/>

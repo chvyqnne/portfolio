@@ -38,8 +38,8 @@ export const AboutTextSection = () => {
 					I&apos;m a dev based in Northern Virginia/DC with 1 year of professional experience in
 					full-stack development and 4 years spent doing summer and year-round tech internships while in school.
 					I&apos;ve been fortunate to explore the different facets of programming, from data science and machine learning
-					to developing web apps and databases. I was born and raised in a rural small town on the west coast of Oʻahu, Hawaiʻi.
-					I am passionate about providing an excellent UX and creating all of my projects with love! I find it
+					to developing web apps and databases.
+					I am passionate about providing an excellent UX and crafting all of my projects with love! I find it
 					extremely rewarding when I can see a project through from start to finish while being
 					involved in the planning and design processes.
 				</p>

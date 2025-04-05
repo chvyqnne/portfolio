@@ -18,30 +18,36 @@ export const experience: Experience[] = [
 		],
 		responsibilities: [
 			'Architecting and developing 5+ web- and mobile-friendly full-stack applications in Linux',
-			'Implemented responsive design and clean UI/UX',
-			'Collaborating in an Agile environment with developers, designers, and stakeholders to deliver high-quality products',
+			'Implementing responsive design and clean UI/UX',
 		],
 	},
 	{
 		year: '2024',
 		title: 'Data Processing Technician',
 		company: 'Innovative Driven',
-		timeline: '',
-		skills: [],
-		responsibilities: [],
+		timeline: '03/2024 - 01/2025',
+		skills: [
+			'Nuix', 'Relativity', 'Data Processing', 'Deduplication',
+		],
+		responsibilities: [
+			'Process large volumes of ESI with Nuix and Relativity',
+			'Perform deduplication, deNISTing, metadata extraction, and filtering to ensure data relevance and compliance with client specifications',
+			'Develop reusable scripts and batch operations to automate repetitive processing workflows, reducing manual labor and human error',
+		],
 	},
 	{
 		year: '2023',
 		title: 'Data Analyst',
 		company: 'Innovative Driven',
-		timeline: '08/2023 - 01/2025',
+		timeline: '08/2023 - 03/2024',
 		skills: [
 			'Go', 'SQLite', 'ServiceNow', 'Power Apps',
 		],
 		responsibilities: [
-			'Developed concurrency-based data tools with Goroutines',
+			'Managed data intake workflows for eDiscovery, including receiving, cataloging, and organizing large volumes of electronically stored information (ESI) for litigation readiness',
 			'Led dashboard maintenance and automation in Power Apps',
 			'Performed end-to-end eDiscovery data processing',
+			'Wrote internal technical documentation and SOPs to standardize data intake and processing procedures',
 		],
 	},
 	{
