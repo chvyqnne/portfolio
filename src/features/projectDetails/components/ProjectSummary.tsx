@@ -101,6 +101,7 @@ export const ProjectSummary = ({
 							link={link}
 							showArrow={true}
 							variant='yellow'
+							newTab
 						/> : null}
 					
 				</motion.div>

@@ -34,6 +34,8 @@ export const projects: Project[] = [
 		role: 'Developer',
 		tools: ['React', 'TypeScript', 'Tailwind CSS'],
 		skills: ['Design Systems', 'UX', 'Scalability'],
+		link: 'https://github.com/chvyqnne/portfolio',
+		linkLabel:'code',
 		image: '/images/portfolioSpec.png',
 		imageCaption: 'The original Figma design for this site!',
 		sections: [
