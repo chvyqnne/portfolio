@@ -15,7 +15,7 @@ export const Navbar = ({ onContactClick }: Props) => {
 					<img
 						alt='tulip'
 						className='w-6 h-6 emoji-shake'
-						src='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f337.svg'
+						src='/emojis/tulip.svg'
 					/>
 				</NavLink>
 

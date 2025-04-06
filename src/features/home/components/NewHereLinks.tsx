@@ -24,9 +24,7 @@ export const NewHereLinks = () => {
 			>
 				about me
 			</NavLink>
-			<span aria-label='flower' className='emoji-shake ml-1' role='img'>
-				🌸
-			</span>
+			<img aria-label='flower' className='emoji-shake ml-2 w-5 h-5' src='/emojis/cherryBlossom.svg' alt='cherry-blossom-emoji' />
 		</div>
 	);
 };

@@ -50,7 +50,7 @@ export const AboutTextSection = () => {
 					<img
 						alt='pin emoji'
 						className='w-5 h-5 emoji-shake'
-						src='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cc.svg'/>
+						src='/emojis/pushpin.svg'/>
 					<p className='text-base font-semibold'>pinned links from my little corner of the internet:</p>
 				</div>
 				<AboutLinkList />

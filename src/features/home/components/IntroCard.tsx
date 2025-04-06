@@ -21,7 +21,7 @@ export const IntroCard = () => {
 				<img
 					alt='tulip'
 					className='emoji-shake w-7 h-7'
-					src='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f337.svg'
+					src='/emojis/tulip.svg'
 				/>
 			</div>
 
@@ -29,7 +29,7 @@ export const IntroCard = () => {
 				<img
 					alt='woman-working-emoji'
 					className='emoji-shake w-7 h-7'
-					src='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f469-1f3fb-200d-1f4bb.svg'
+					src='/emojis/womanTech.svg'
 				/>
 				<p className='font-ibm text-[18px]'>
 					full stack developer
@@ -40,7 +40,7 @@ export const IntroCard = () => {
 				<img
 					alt='sunrise-emoji'
 					className='emoji-shake  w-7 h-7'
-					src='https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f324.svg'
+					src='/emojis/sunrise.svg'
 				/>
 				<p className='font-ibm text-[18px]'>AU grad based in the DMV</p>
 			</div>
