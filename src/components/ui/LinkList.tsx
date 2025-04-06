@@ -5,7 +5,7 @@ const SPACER = '✿';
 const contactButtons: (SoftLiftButtonProps & { children: string })[] = [
 	{
 		color: 'pink',
-		href: '/Cabang_Cheyanne_Resume_Dev.pdf',
+		href: '/docs/Cabang_Cheyanne_Resume_Dev.pdf',
 		emojiSrc: '/emojis/notes.svg',
 		download: true,
 		children: 'resume',
