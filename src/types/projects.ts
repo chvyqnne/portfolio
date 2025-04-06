@@ -36,7 +36,7 @@ export const projects: Project[] = [
 		skills: ['Design Systems', 'UX', 'Scalability'],
 		link: 'https://github.com/chvyqnne/portfolio',
 		linkLabel:'code',
-		image: '/images/portfolioSpec.png',
+		image: '/images/portfolioSpec.jpg',
 		imageCaption: 'The original Figma design for this site!',
 		sections: [
 			{
