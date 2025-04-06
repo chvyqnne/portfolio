@@ -42,17 +42,12 @@ export const ExperiencePanel = () => {
 		}
 	};
 
-	const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-		if (e.deltaY > 0) scrollDown();
-		if (e.deltaY < 0) scrollUp();
-	};
-
 	const getColorIndex = (index: number) => {
 		return Math.floor((index / experience.length) * pastelColorClasses.length) % pastelColorClasses.length;
 	};
 
 	return (
-		<div className='flex flex-col gap-6 w-full lg:flex-row lg:items-start mt-20 md:mt-0'>
+		<div className='flex flex-col gap-6 w-full lg:flex-row lg:items-start mt-20 md:mt-10'>
 			<div className='flex flex-col lg:flex-row gap-6'>
 				<ExperienceScrollList
 					canScrollDown={canScrollDown}
@@ -62,7 +57,6 @@ export const ExperiencePanel = () => {
 					onScrollDown={scrollDown}
 					onScrollUp={scrollUp}
 					onSelect={setSelectedIndex}
-					onWheel={handleWheel}
 					scrollStart={scrollStart}
 					selectedIndex={selectedIndex}
 				/>

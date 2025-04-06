@@ -15,7 +15,7 @@ export const About = () => {
 		>
 			<div className='bg-gradient-to-tr from-fuchsia-50 to-white animate-gradient w-full h-full' id='about-background'>
 				<div className='flex flex-col w-full' id='about-content-container'>
-					<div className='flex flex-col lg:flex-row gap-10 justify-center mt-20 mx-6 md:mx-40 md:mt-0'>
+					<div className='flex flex-col lg:flex-row gap-10 justify-center mt-20 mx-6 md:mx-40 md:mt-10'>
 						<AboutTextSection />
 						<motion.div
 							whileHover={{

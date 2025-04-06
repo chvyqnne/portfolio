@@ -3,7 +3,7 @@ import { ArrowUp, ArrowDown } from 'lucide-react';
 import { ExperienceItem } from './ExperienceItem';
 import { motion } from 'framer-motion';
 
-type ExperienceScrollListProps = {
+type Props = {
 	readonly items: {
 		year: string;
 		title: string;
@@ -16,7 +16,6 @@ type ExperienceScrollListProps = {
 	readonly onScrollDown: () => void;
 	readonly canScrollUp: boolean;
 	readonly canScrollDown: boolean;
-	readonly onWheel: (e: React.WheelEvent<HTMLDivElement>) => void;
 	readonly colorIndex: number;
 };
 
@@ -29,9 +28,8 @@ export const ExperienceScrollList = ({
 	onScrollDown,
 	canScrollUp,
 	canScrollDown,
-	onWheel,
 	colorIndex,
-}: ExperienceScrollListProps) => {
+}: Props) => {
 	const listRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -76,7 +74,7 @@ export const ExperienceScrollList = ({
 					<ArrowUp />
 				</button>
 			</div>
-			<div className='flex flex-col gap-6 mb-4 min-w-0 w-full max-w-[550px]' onWheel={onWheel} ref={listRef}>
+			<div className='flex flex-col gap-6 mb-4 min-w-0 w-full max-w-[550px]' ref={listRef}>
 				{items.map((item, index) => {
 					const actualIndex = scrollStart + index;
 
