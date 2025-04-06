@@ -63,21 +63,8 @@ export const ExperienceScrollList = ({
 		handleTouch();
 	}, [onScrollDown, onScrollUp]);
 
-	useEffect(() => {
-		const current = listRef.current;
-		if (!current) return;
-
-		const selectedItem = current.querySelector('[data-selected="true"]');
-		if (selectedItem instanceof HTMLElement) {
-			selectedItem.scrollIntoView({
-				behavior: 'smooth',
-				block: 'center',
-			});
-		}
-	}, [selectedIndex]);
-
 	return (
-		<div className='w-full lg:w-1/2 p-4 flex flex-col lg:min-h-[550px] justify-center'>
+		<div className='w-full lg:w-1/2 px-2 md:px-4 flex flex-col lg:min-h-[550px] justify-center'>
 			<div className='flex justify-center mb-4'>
 				<button
 					aria-label='Scroll up'
@@ -89,7 +76,7 @@ export const ExperienceScrollList = ({
 					<ArrowUp />
 				</button>
 			</div>
-			<div className='flex flex-col gap-6 overflow-auto mb-4' onWheel={onWheel} ref={listRef}>
+			<div className='flex flex-col gap-6 mb-4 min-w-0 w-full max-w-[550px]' onWheel={onWheel} ref={listRef}>
 				{items.map((item, index) => {
 					const actualIndex = scrollStart + index;
 

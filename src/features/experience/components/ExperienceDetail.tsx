@@ -1,6 +1,6 @@
-import { pastelColorClasses } from '../../../utils/colorPalette';
+import { pastelColorClasses } from "../../../utils/colorPalette";
 
-type ExperienceDetailProps = {
+type Props = {
 	readonly timeline: string;
 	readonly skills: string[];
 	readonly responsibilities: string[];
@@ -12,12 +12,12 @@ export const ExperienceDetail = ({
 	skills,
 	responsibilities,
 	index,
-}: ExperienceDetailProps) => {
+}: Props) => {
 	const colorClass = pastelColorClasses[index];
 
 	return (
 		<div
-			className={`rounded-2xl w-full lg:min-w-[400px] lg:max-w-[420px] max-h-[60vh] lg:min-h-full flex flex-col justify-start border gap-5 p-6 lg:p-8 ${colorClass}`}
+			className={`rounded-2xl w-full lg:min-w-[400px] lg:max-w-[420px] lg:max-h-[60vh] lg:min-h-full flex flex-col justify-start border gap-5 p-6 lg:p-8 ${colorClass}`}
 		>
 			<div className='mb-2'>
 				<p className={`text-md ${colorClass.split(' ')[2]} font-bold font-inter uppercase`}>

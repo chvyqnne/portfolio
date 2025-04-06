@@ -8,9 +8,9 @@ type Props = {
 
 export const Navbar = ({ onContactClick }: Props) => {
 	return (
-		<nav className='fixed top-0 left-0 w-full py-4 z-50 backdrop-filter backdrop-blur-lg bg-opacity-70 bg-white'>
+		<nav className='fixed top-0 left-0 w-full md:py-4 py-2 z-50 backdrop-filter backdrop-blur-lg bg-opacity-70 bg-white'>
 			<div className='max-w-6xl mx-auto flex flex-col md:justify-between md:flex-row items-center px-6'>
-				<NavLink className='flex flex-row justify-center items-center gap-2' to='/'>
+				<NavLink className='flex flex-row  justify-center items-center gap-2' to='/'>
 					<p className='text-[20px] font-inter hover:text-[#FFC2E7]'>cheyanne cabang</p>
 					<img
 						alt='tulip'
@@ -19,7 +19,7 @@ export const Navbar = ({ onContactClick }: Props) => {
 					/>
 				</NavLink>
 
-				<div className='flex flex-row gap-7'>
+				<div className='flex flex-col md:flex-row md:gap-7 gap-4'>
 					<div className='flex items-center text-[16px] font-inter'>
 						{['about', 'experience', 'work'].map((tab, index) => (
 							<div className='flex items-center' key={tab}>

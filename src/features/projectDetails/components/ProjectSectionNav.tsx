@@ -29,7 +29,7 @@ export const ProjectSectionNav = ({ sections }: Props) => {
 	}, [sections]);
 
 	return (
-		<div className='border border-black rounded-2xl min-w-[250px] bg-white p-6 md:min-h-[70vh] max-h-[80vh] overflow-auto'>
+		<div className='border border-black rounded-2xl min-w-[250px] bg-white p-6 lg:min-h-[70vh] max-h-[80vh] overflow-auto'>
 			<ul className='text-xl space-y-6 font-inter'>
 				<li>
 					<a

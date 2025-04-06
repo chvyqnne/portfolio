@@ -16,7 +16,7 @@ export const AboutTextSection = () => {
 			initial={{ opacity: 0, y: 30 }}
 			transition={{ duration: 0.6, delay: 0.2 }}
 		>
-			<div className='text-3xl mb-3 min-h-[100px] lg:min-h-[0px]'>
+			<div className='text-3xl mb-3 min-h-[110px] lg:min-h-[0px]'>
 				<p>nice to meet you!</p>
 				<p className='text-3xl'>
 					i&apos;m cheyanne,&nbsp;

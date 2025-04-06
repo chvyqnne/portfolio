@@ -60,7 +60,7 @@ export const ProjectSummary = ({
 					transition={{ delay: 0.2 }}
 				>
 					<div
-						className={`border rounded-2xl font-inter p-6 min-w-[350px] min-h-[300px] text-lg ${summaryColor}`}
+						className={`border rounded-2xl font-inter p-6 lg:min-w-[350px] min-h-[300px] text-lg ${summaryColor}`}
 					>
 						<div className='mb-4'>
 							<p className='flex items-center gap-2 text-sm font-semibold uppercase text-yellow-600'>

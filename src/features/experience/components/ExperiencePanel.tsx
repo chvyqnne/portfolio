@@ -52,8 +52,8 @@ export const ExperiencePanel = () => {
 	};
 
 	return (
-		<div className='flex flex-col gap-4 lg:max-w-6xl lg:min-w-6xl'>
-			<div className='flex flex-col lg:flex-row gap-6 w-full'>
+		<div className='flex flex-col gap-6 w-full lg:flex-row lg:items-start mt-20 md:mt-0'>
+			<div className='flex flex-col lg:flex-row gap-6'>
 				<ExperienceScrollList
 					canScrollDown={canScrollDown}
 					canScrollUp={canScrollUp}
@@ -71,7 +71,7 @@ export const ExperiencePanel = () => {
 				</div>
 				<motion.div
 					animate={{ opacity: 1, x: 0 }}
-					className='mt-4'
+					className='lg:mt-4'
 					exit={{ opacity: 0, x: -30 }}
 					initial={{ opacity: 0, x: 30 }}
 					key={selectedIndex}

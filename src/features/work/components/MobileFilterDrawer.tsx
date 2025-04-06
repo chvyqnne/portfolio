@@ -28,7 +28,7 @@ export const MobileFilterDrawer = ({
 	return (
 		<div className='lg:hidden w-full px-4'>
 			<button
-				className='w-full bg-pink-400 text-white mb-10 py-2 px-4 rounded-full border border-black font-semibold hover:bg-pink-600 transition-colors'
+				className='w-full bg-pink-400 text-white mb-5 py-2 px-4 rounded-full border border-black font-semibold hover:bg-pink-600 transition-colors'
 				onClick={() => { setOpen(!open); }}
 				type='button'
 			>
@@ -44,7 +44,7 @@ export const MobileFilterDrawer = ({
 					key='drawer'
 					transition={{ duration: 0.3, ease: 'easeInOut' }}
 				>
-					<div className='p-4'>
+					<div className='pb-5'>
 						<FilterSidebar
 							allSkills={allSkills}
 							allTools={allTools}

@@ -44,7 +44,7 @@ export const Work = () => {
 			transition={{ duration: 0.6, delay: 0.2 }}
 		>
 			<div className='flex flex-col lg:flex-row w-full min-h-screen bg-gradient-to-tr from-fuchsia-50 to-white justify-center lg:pt-8 px-4 sm:px-6 lg:px-10'>
-				<div className='flex flex-col'>
+				<div className='flex flex-col mt-25 md:mt-0'>
 					<div className='flex flex-col lg:flex-row w-full max-w-[1400px] gap-10'>
 						<div
 							className='flex-1 overflow-y-auto pr-4'
@@ -63,7 +63,7 @@ export const Work = () => {
 								selectedSkills={selectedSkills}
 								toggleSkill={toggleSkill}
 							/>
-							<div className='flex flex-col gap-20 min-h-[200px]'>
+							<div className='flex flex-col gap-20 min-h-[100px]'>
 								{filteredProjects.length > 0 ? (
 									filteredProjects.map((project) => (
 										<ProjectCard

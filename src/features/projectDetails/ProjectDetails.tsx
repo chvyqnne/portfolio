@@ -30,7 +30,7 @@ export const ProjectDetails = () => {
 		>
 			<div className='bg-gradient-to-tr from-pink-300 via-yellow-50 to-slate-50 pt-[40px] lg:pt-[60px] md:px-6'>
 				<div className='flex flex-col md:flex-col lg:flex-row justify-center gap-4 mx-6 md:mx-30'>
-					<div className='md:sticky md:top-[120px] h-fit flex flex-col gap-4'>
+					<div className='lg:sticky md:top-[120px] h-fit flex flex-col gap-4'>
 						<BackLink to='/work' />
 						<ProjectSectionNav sections={project.sections} />
 					</div>

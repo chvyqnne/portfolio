@@ -38,12 +38,16 @@ export const ProjectCard = ({
 				}}
 			>
 				<button
-					className='rounded-2xl overflow-hidden border border-black shadow-[10px_10px_0_0_#FF90C6] w-full h-[250px] bg-white'
+					className='group rounded-2xl overflow-hidden border border-black shadow-[10px_10px_0_0_#FF90C6] w-full h-[250px] bg-white'
 					onClick={() => { setShowModal(true); }}
 					type='button'
 				>
 					{image ? (
-						<img alt={title} className='object-cover w-full h-full' src={image} />
+						<img
+							alt={title}
+							src={image}
+							className='object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105 cursor-zoom-in'
+						/>
 					) : (
 						<div className='w-full h-full flex items-center justify-center text-sm text-gray-400' />
 					)}
